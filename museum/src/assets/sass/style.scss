@@ -1,0 +1,31 @@
+//Abstract
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+/* Default styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* System Fonts */
+body {
+  @extend %font-prim;
+  @include font($size: 1.6rem, $height: 2.6rem, $weight: normal);
+}
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/footer";
