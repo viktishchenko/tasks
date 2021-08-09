@@ -28,15 +28,25 @@ body {
 
 /* Blocks */
 .header {
-    margin: 20px 0;
-    background-color: #d7d7d7;
+    background-color: #030303;
+    color: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .main {
-    flex: 1;
+    border: 1px solid red;
 }
 
 footer {
-    margin: 20px 0;
-    background-color: #bcd0e5;
+    border: 1px solid red;
 }

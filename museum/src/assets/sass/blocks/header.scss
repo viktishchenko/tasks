@@ -1,4 +1,9 @@
 .header {
-  margin: $m-20;
-  background-color: $color-border;
+  background-color: $bg-dark;
+  color: $text-white;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
