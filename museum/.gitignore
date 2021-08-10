@@ -1,3 +1,5 @@
+.gitignore
+_backstage
 package.json
 gulpfile.js
 package-lock.json

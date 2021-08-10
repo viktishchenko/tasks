@@ -1,0 +1,20 @@
+.logo {
+  background-image: url(../../../assets/img/logo/logo-louvre.svg);
+  background-repeat: no-repeat;
+  background-position: left 9px;
+  text-decoration: none;
+  color: $text-white;
+  @extend %transition;
+  &:hover {
+    filter: invert(27%) sepia(51%) saturate(500%) hue-rotate(5deg)
+      brightness(80%) contrast(50%);
+  }
+}
+
+.header-logo {
+  @extend %font-add;
+  @include font($size: 2.8rem, $height: 5rem, $weight: 400);
+  margin-left: 70px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}

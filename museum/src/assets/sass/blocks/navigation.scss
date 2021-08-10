@@ -1,0 +1,23 @@
+.navigation {
+  display: flex;
+}
+
+.navigation__link {
+  margin-right: 54px;
+  list-style: none;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.navigation__item {
+  @extend %font-prim;
+  @include font($size: 2.2rem, $height: 5rem, $weight: 200);
+  letter-spacing: 2px;
+  color: $text-white;
+  text-decoration: none;
+  @extend %transition;
+  &:hover {
+    color: $font-gold;
+  }
+}

@@ -8,15 +8,12 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
   font-size: 10px;
-}
-
-body {
-  padding: 0;
-  margin: 0;
 }
 
 /* System Fonts */
@@ -28,5 +25,7 @@ body {
 /* Blocks */
 @import "blocks/header";
 @import "blocks/container";
+@import "blocks/logo";
+@import "blocks/navigation";
 @import "blocks/main";
 @import "blocks/footer";
