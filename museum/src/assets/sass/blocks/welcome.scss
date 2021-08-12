@@ -1,0 +1,48 @@
+// .welcome {
+// }
+
+.welcome__container {
+  display: flex;
+  align-items: center;
+}
+
+.welcom__content {
+  min-width: 50%;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 68px;
+  z-index: 1;
+}
+
+.welcome__text {
+  @extend %font-prim;
+  @include font($size: 2.8rem, $height: 3.3rem, $weight: 300);
+  letter-spacing: 2px;
+  color: $text-white;
+  margin-bottom: 50px;
+}
+
+.welcome__button {
+  display: inline-block;
+  text-decoration: none;
+  height: 75px;
+  width: 360px;
+  text-align: center;
+  background-color: $dark-red;
+  border-radius: 10px;
+  @extend %font-prim;
+  @include font($size: 2.2rem, $height: 7.5rem, $weight: 100);
+  letter-spacing: 2px;
+  color: $text-white;
+  @extend %transition;
+  &:hover {
+    background-color: $font-gold;
+  }
+}
+
+.welcome__slider {
+  margin-left: -280px;
+  position: relative;
+}

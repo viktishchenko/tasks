@@ -1,0 +1,19 @@
+.section {
+  padding-bottom: 75px;
+}
+
+.section_dark {
+  background-color: $bg-dark;
+  color: $text-white;
+}
+
+.section__title {
+  @extend %font-add;
+  @include font($size: 8rem, $height: 9rem, $weight: 400);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.section-dark {
+  background-color: $bg-dark;
+}

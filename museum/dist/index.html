@@ -16,36 +16,31 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/img/favicon/apple-touch-icon.png"
+      href="./assets/img/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/img/favicon/favicon-32x32.png"
+      href="./assets/img/favicon/favicon-32x32.png"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/img/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+    <link rel="icon" href="./assets/img/favicon/favicon.ico" />
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="assets/img/favicon/safari-pinned-tab.svg"
+      href="./assets/img/favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <meta name="msapplication-TileColor" content="#ffc40d" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Museum</title>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container header-container">
-        <a class="logo" href="/"> <h1 class="header-logo">Louvre</h1></a>
+        <a class="logo" href="#"> <h1 class="header-logo">Louvre</h1></a>
         <nav class="header-navigation">
           <ul class="navigation">
             <li class="navigation__link">
@@ -73,15 +68,60 @@
 
     <!-- Content -->
     <main class="main">
-      <div class="container">
-        <!-- Welcome -->
-        <section class="welcome">welcome section</section>
-        <section class="visiting">visiting</section>
-        <section class="explore">explore</section>
-        <section class="video">video</section>
-        <section class="tickets">tickets</section>
-        <section class="contacts">contacts</section>
-      </div>
+      <!-- Welcome -->
+      <section class="section welcome section_dark">
+        <div class="container welcome__container">
+          <div class="welcom__content">
+            <h2 class="section__title">
+              Welcome <br />
+              to the Louvre
+            </h2>
+            <p class="welcome__text">From the castle to the museum</p>
+            <a
+              class="welcome__button"
+              href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Discover the Louvre</a
+            >
+          </div>
+          <div class="welcome__slider">
+            <div class="slider" id="slider">
+              <div class="slider__item">
+                <img src="./assets/img/welcome-slider/1.jpg" alt="Огонь" />
+              </div>
+            </div>
+            <div class="slider__nav">
+              <div class="slider__value">
+                <span>01</span>
+                <span>|</span>
+                <span>05</span>
+              </div>
+              <div class="slider__dots">
+                <span class="slider__dot"></span>
+                <span class="slider__dot slider__dot-active"></span>
+                <span class="slider__dot"></span>
+                <span class="slider__dot"></span>
+                <span class="slider__dot"></span>
+              </div>
+              <div class="slider__arrows">
+                <button class="slider__arrow-left slider-btn"></button>
+                <button class="slider__arrow-right slider-btn"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section visiting-section" id="visiting">visiting</section>
+      <section class="section explore-section section-dark" id="explore">
+        explore
+      </section>
+      <section class="section video-section" id="video">video</section>
+      <section class="section gallery-section section-dark" id="gallery">
+        gallery
+      </section>
+      <section class="section tickets-section" id="tickets">tickets</section>
+      <section class="section contacts-section" id="contacts">contacts</section>
     </main>
 
     <!-- Footer -->

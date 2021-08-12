@@ -14,6 +14,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 /* System Fonts */
@@ -28,4 +29,7 @@ body {
 @import "blocks/logo";
 @import "blocks/navigation";
 @import "blocks/main";
+@import "blocks/section";
+@import "blocks/welcome";
+@import "blocks/slider";
 @import "blocks/footer";
