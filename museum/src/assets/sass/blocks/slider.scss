@@ -4,7 +4,7 @@
     content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 7px;
     left: 0;
     right: 0;
     background: linear-gradient(
@@ -15,27 +15,29 @@
     );
   }
 }
-// .slider__item {
-// }
+.slider__item img {
+  width: 100%;
+  height: auto;
+}
 .slider__nav {
   position: absolute;
   right: 0;
   bottom: -53px;
   display: flex;
   justify-content: center;
-  align-items: center;
   min-width: 600px;
   height: 120px;
+  align-items: center;
   background: $bg-dark;
 }
 
 .slider__value {
-  margin-right: 45px;
   display: flex;
-  justify-content: space-between;
-  min-width: 80px;
+  margin-right: 50px;
+  min-width: 76px;
   @extend %font-prim;
   @include font($size: 2.2rem, $height: 4rem, $weight: 400);
+  justify-content: space-between;
   text-transform: uppercase;
   color: $text-white;
 }
@@ -43,17 +45,17 @@
 .slider__dots {
   display: flex;
   justify-content: space-between;
-  min-width: 200px;
+  min-width: 196px;
   margin-right: 45px;
 }
 .slider__dot {
+  padding: 0;
   width: 16px;
   height: 16px;
-  background-color: $text-white;
-  cursor: pointer;
   border: none;
   outline: 0;
-  padding: 0;
+  background-color: $text-white;
+  cursor: pointer;
   @extend %transition;
   &:hover {
     background-color: $font-gold;
@@ -64,9 +66,9 @@
 }
 
 .slider__arrows {
+  display: flex;
   width: 80px;
   height: 8px;
-  display: flex;
 }
 
 .slider__arrow-left {
@@ -83,10 +85,10 @@
 
 .slider-btn {
   min-width: 50%;
-  background-color: transparent;
-  border: none;
   color: $text-white;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
   @extend %transition;
   &:hover {
     filter: invert(27%) sepia(51%) saturate(500%) hue-rotate(5deg)

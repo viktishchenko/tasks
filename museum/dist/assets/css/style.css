@@ -1,12 +1,12 @@
-.slider-btn, .slider__dot, .welcome__button, .navigation__item, .logo {
+.card__title::after, .card, .slider-btn, .slider__dot, .welcome__button, .navigation__item, .logo {
     transition: all 0.3s ease-out;
 }
 
-.slider__value, .welcome__button, .welcome__text, .navigation__item, body {
+.card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .navigation__item, body {
     font-family: "Roboto", sans-serif;
 }
 
-.section__title, .header-logo {
+.card__title, .section__title, .header-logo {
     font-family: "Forum", cursive;
 }
 
@@ -14,9 +14,9 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -40,9 +40,10 @@ body {
 
 .header-container {
     display: flex;
+    min-height: 160px;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    min-height: 160px;
 }
 
 .container {
@@ -54,8 +55,8 @@ body {
     background-image: url(../../assets/img/logo/logo-louvre.svg);
     background-repeat: no-repeat;
     background-position: left 9px;
-    text-decoration: none;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .logo:hover {
@@ -63,11 +64,11 @@ body {
 }
 
 .header-logo {
+    margin-left: 70px;
     font-size: 2.8rem;
     font-style: normal;
     font-weight: 400;
     line-height: 5rem;
-    margin-left: 70px;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
@@ -101,7 +102,7 @@ body {
 }
 
 .section {
-    padding-bottom: 75px;
+    padding-bottom: 53px;
 }
 
 .section_dark {
@@ -110,6 +111,8 @@ body {
 }
 
 .section__title {
+    position: relative;
+    margin-bottom: 25px;
     font-size: 8rem;
     font-style: normal;
     font-weight: 400;
@@ -122,43 +125,57 @@ body {
     background-color: #030303;
 }
 
+.section__title-gold {
+    color: #9d8665;
+}
+
+.section__title-underline {
+    margin-bottom: 103px;
+}
+
+.section__title-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -28px;
+    height: 3px;
+    background-color: #710707;
+}
+
 .welcome__container {
     display: flex;
     align-items: center;
 }
 
 .welcom__content {
-    min-width: 50%;
-    min-height: 390px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 68px;
+    flex: 1;
+    padding-bottom: 62px;
     z-index: 1;
 }
 
 .welcome__text {
+    padding-bottom: 75px;
     font-size: 2.8rem;
     font-style: normal;
     font-weight: 300;
     line-height: 3.3rem;
     letter-spacing: 2px;
     color: #ffffff;
-    margin-bottom: 50px;
 }
 
 .welcome__button {
     display: inline-block;
-    text-decoration: none;
     height: 75px;
     width: 360px;
-    text-align: center;
-    background-color: #710707;
-    border-radius: 10px;
     font-size: 2.2rem;
     font-style: normal;
     font-weight: 100;
     line-height: 7.5rem;
+    text-align: center;
+    background-color: #710707;
+    text-decoration: none;
+    border-radius: 10px;
     letter-spacing: 2px;
     color: #ffffff;
 }
@@ -168,8 +185,9 @@ body {
 }
 
 .welcome__slider {
-    margin-left: -280px;
     position: relative;
+    margin-left: -280px;
+    padding-top: 5px;
 }
 
 .slider {
@@ -180,10 +198,15 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 7px;
     left: 0;
     right: 0;
     background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+}
+
+.slider__item img {
+    width: 100%;
+    height: auto;
 }
 
 .slider__nav {
@@ -192,21 +215,21 @@ body {
     bottom: -53px;
     display: flex;
     justify-content: center;
-    align-items: center;
     min-width: 600px;
     height: 120px;
+    align-items: center;
     background: #030303;
 }
 
 .slider__value {
-    margin-right: 45px;
     display: flex;
-    justify-content: space-between;
-    min-width: 80px;
+    margin-right: 50px;
+    min-width: 76px;
     font-size: 2.2rem;
     font-style: normal;
     font-weight: 400;
     line-height: 4rem;
+    justify-content: space-between;
     text-transform: uppercase;
     color: #ffffff;
 }
@@ -214,18 +237,18 @@ body {
 .slider__dots {
     display: flex;
     justify-content: space-between;
-    min-width: 200px;
+    min-width: 196px;
     margin-right: 45px;
 }
 
 .slider__dot {
+    padding: 0;
     width: 16px;
     height: 16px;
-    background-color: #ffffff;
-    cursor: pointer;
     border: none;
     outline: 0;
-    padding: 0;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
 .slider__dot:hover {
@@ -237,9 +260,9 @@ body {
 }
 
 .slider__arrows {
+    display: flex;
     width: 80px;
     height: 8px;
-    display: flex;
 }
 
 .slider__arrow-left {
@@ -257,14 +280,78 @@ body {
 
 .slider-btn {
     min-width: 50%;
-    background-color: transparent;
-    border: none;
     color: #ffffff;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 .slider-btn:hover {
     filter: invert(27%) sepia(51%) saturate(500%) hue-rotate(5deg) brightness(80%) contrast(50%);
+}
+
+.visiting {
+    padding-top: 77px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 78px 60px;
+}
+
+.card {
+    text-decoration: none;
+    color: #000000;
+}
+
+.card:hover {
+    color: #9d8665;
+}
+
+.card:hover .card__title::after {
+    width: 100%;
+}
+
+.card__img {
+    margin-bottom: 18px;
+}
+
+.card__title {
+    position: relative;
+    margin-bottom: 21px;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.card__title::after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 2px;
+    background-color: #710707;
+}
+
+.card__desc {
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 2.6rem;
+}
+
+.card__text {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 2.1rem;
 }
 
 footer {

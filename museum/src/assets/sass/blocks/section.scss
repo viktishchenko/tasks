@@ -1,5 +1,5 @@
 .section {
-  padding-bottom: 75px;
+  padding-bottom: 53px;
 }
 
 .section_dark {
@@ -8,6 +8,8 @@
 }
 
 .section__title {
+  position: relative;
+  margin-bottom: 25px;
   @extend %font-add;
   @include font($size: 8rem, $height: 9rem, $weight: 400);
   letter-spacing: 5px;
@@ -16,4 +18,20 @@
 
 .section-dark {
   background-color: $bg-dark;
+}
+
+.section__title-gold {
+  color: $font-gold;
+}
+.section__title-underline {
+  margin-bottom: 103px;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -28px;
+    height: 3px;
+    background-color: $dark-red;
+  }
 }

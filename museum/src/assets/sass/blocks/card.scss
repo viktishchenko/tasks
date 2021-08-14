@@ -1,0 +1,51 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 78px 60px;
+}
+.card {
+  text-decoration: none;
+  color: $text-black;
+  @extend %transition;
+  &:hover {
+    color: $font-gold;
+  }
+}
+
+.card:hover .card__title::after {
+  width: 100%;
+}
+
+.card__img {
+  margin-bottom: 18px;
+}
+
+.card__title {
+  position: relative;
+  margin-bottom: 21px;
+  @extend %font-add;
+  @include font($size: 3.2rem, $height: 3.5rem, $weight: 400);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 2px;
+    background-color: $dark-red;
+    @extend %transition;
+  }
+}
+
+.card__desc {
+  margin-bottom: 10px;
+  @extend %font-prim;
+  @include font($size: 2.2rem, $height: 2.6rem, $weight: 200);
+}
+.card__text {
+  @extend %font-prim;
+  @include font($size: 1.8rem, $height: 2.1rem, $weight: 200);
+}
