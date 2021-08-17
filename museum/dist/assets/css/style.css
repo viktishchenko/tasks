@@ -2,7 +2,7 @@
     transition: all 0.3s ease-out;
 }
 
-.card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .navigation__item, body {
+.explore-text, .card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .navigation__item, body {
     font-family: "Roboto", sans-serif;
 }
 
@@ -102,7 +102,7 @@ body {
 }
 
 .section {
-    padding-bottom: 53px;
+    padding-bottom: 75px;
 }
 
 .section_dark {
@@ -141,6 +141,10 @@ body {
     bottom: -28px;
     height: 3px;
     background-color: #710707;
+}
+
+.welcome {
+    padding-bottom: 53px;
 }
 
 .welcome__container {
@@ -297,7 +301,7 @@ body {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 78px 60px;
+    gap: 76px 60px;
 }
 
 .card {
@@ -352,6 +356,38 @@ body {
     font-style: normal;
     font-weight: 200;
     line-height: 2.1rem;
+}
+
+.explore {
+    padding-top: 75px;
+}
+
+.explore-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.explore__content {
+    max-width: 660px;
+}
+
+.explore-text {
+    margin-bottom: 27px;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 3.8rem;
+    color: #ffffff;
+}
+
+.explore-text span {
+    color: #9d8665;
+}
+
+.explore-img {
+    margin-top: 15px;
+    min-width: 720px;
+    min-height: 700px;
 }
 
 footer {
