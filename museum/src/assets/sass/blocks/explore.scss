@@ -8,21 +8,11 @@
 }
 
 .explore__content {
-  max-width: 660px;
-}
-
-.explore-text {
-  margin-bottom: 27px;
-  @extend %font-prim;
-  @include font($size: 2.2rem, $height: 3.8rem, $weight: 300);
-  color: $text-white;
-  span {
-    color: $font-gold;
-  }
+  flex-basis: 660px;
+  flex-shrink: 0;
 }
 
 .explore-img {
   margin-top: 15px;
-  min-width: 720px;
-  min-height: 700px;
+  max-width: 720px;
 }

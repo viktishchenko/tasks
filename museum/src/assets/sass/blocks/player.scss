@@ -1,0 +1,91 @@
+.player {
+  display: flex;
+  flex-direction: column;
+}
+.player__container {
+  height: 650px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../../assets/img/player/Video_journey.jpg) no-repeat center
+    center/cover;
+}
+.player__button {
+  width: 220px;
+  height: 220px;
+  background: url(../../../assets/img/player/svg/player_btn.svg);
+  border: none;
+  cursor: pointer;
+  @extend %transition;
+  &:hover {
+    transform: scale(1.05);
+    filter: invert(7%) sepia(0%) saturate(11%) hue-rotate(159deg)
+      brightness(99%);
+  }
+}
+.player__controls {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  background-color: $bg-dark;
+  button {
+    border: none;
+  }
+}
+
+.player__controls-play {
+  margin-left: 41px;
+  width: 23px;
+  height: 30px;
+  background: url(../../../assets/img/player/svg/controls_play_btn.svg)
+    no-repeat center;
+}
+.player__controls-progress {
+  margin-left: 57px;
+  flex-grow: 1;
+}
+.player__controls-volume {
+  margin-left: 40px;
+  width: 38px;
+  height: 30px;
+  background: url(../../../assets/img/player/svg/controls_volume_btn.svg)
+    no-repeat center;
+}
+
+.player__controls-volume-input {
+  max-width: 155px;
+  margin-left: 20px;
+}
+
+.player__controls-fullscreen {
+  margin: 0 41px 0 57px;
+  width: 36px;
+  height: 36px;
+  background: url(../../../assets/img/player/svg/controls_fullscreen_btn.svg)
+    no-repeat center;
+}
+
+.player__controls-fullscreen,
+.player__controls-volume,
+.player__controls-play {
+  @extend %transition;
+  &:hover {
+    filter: opacity(0.8);
+    cursor: pointer;
+  }
+}
+
+.progress {
+  background: linear-gradient(
+    to right,
+    #24809e 0%,
+    #24809e 54%,
+    #fff 54%,
+    #fff 100%
+  );
+  height: 8px;
+  outline: none;
+  transition: background 450ms ease-in;
+  appearance: none;
+}

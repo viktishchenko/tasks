@@ -23,6 +23,7 @@
 .section__title-gold {
   color: $font-gold;
 }
+
 .section__title-underline {
   margin-bottom: 103px;
   &::after {
@@ -34,4 +35,17 @@
     height: 3px;
     background-color: $dark-red;
   }
+}
+
+.section__text {
+  margin-bottom: 27px;
+  @extend %font-prim;
+  @include font($size: 2.2rem, $height: 3.8rem, $weight: 300);
+  span {
+    color: $font-gold;
+  }
+}
+
+.text-black {
+  color: $text-black;
 }

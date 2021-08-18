@@ -1,0 +1,11 @@
+.video {
+  padding-top: 75px;
+}
+.video__content {
+  display: flex;
+  justify-content: space-between;
+}
+.video__content p {
+  margin-top: 8px;
+  max-width: 720px;
+}
