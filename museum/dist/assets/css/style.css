@@ -43,7 +43,7 @@ body {
 
 .header-container {
     display: flex;
-    min-height: 160px;
+    min-height: 150px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -108,7 +108,7 @@ body {
     padding-bottom: 75px;
 }
 
-.section_dark {
+.section-dark {
     background-color: #030303;
     color: #ffffff;
 }
@@ -173,7 +173,7 @@ body {
 
 .welcom__content {
     flex: 1;
-    padding-bottom: 62px;
+    padding-bottom: 68px;
     z-index: 1;
 }
 
@@ -210,7 +210,6 @@ body {
 .welcome__slider {
     position: relative;
     margin-left: -280px;
-    padding-top: 5px;
 }
 
 .slider {
@@ -278,7 +277,7 @@ body {
 }
 
 .slider__dot-active {
-    background-color: #9d8665;
+    background-color: #d2b183;
 }
 
 .slider__arrows {
@@ -313,7 +312,7 @@ body {
 }
 
 .visiting {
-    padding-top: 77px;
+    padding-top: 75px;
 }
 
 .card-container {
@@ -448,19 +447,19 @@ body {
 }
 
 .player__controls-play {
-    margin-left: 41px;
+    margin: 0 50px 0 30px;
     width: 23px;
     height: 30px;
     background: url(../../../assets/img/player/svg/controls_play_btn.svg) no-repeat center;
 }
 
 .player__controls-progress {
-    margin-left: 57px;
+    margin-right: 50px;
     flex-grow: 1;
 }
 
 .player__controls-volume {
-    margin-left: 40px;
+    margin-right: 50px;
     width: 38px;
     height: 30px;
     background: url(../../../assets/img/player/svg/controls_volume_btn.svg) no-repeat center;
@@ -468,11 +467,11 @@ body {
 
 .player__controls-volume-input {
     max-width: 155px;
-    margin-left: 20px;
+    margin-right: 50px;
 }
 
 .player__controls-fullscreen {
-    margin: 0 41px 0 57px;
+    margin-right: 30px;
     width: 36px;
     height: 36px;
     background: url(../../../assets/img/player/svg/controls_fullscreen_btn.svg) no-repeat center;
@@ -486,7 +485,7 @@ body {
 }
 
 .progress {
-    background: linear-gradient(to right, #24809e 0%, #24809e 54%, #fff 54%, #fff 100%);
+    background: linear-gradient(to right, #710707 0%, #710707 54%, #ffffff 54%, #ffffff 100%);
     height: 8px;
     outline: none;
     transition: background 450ms ease-in;
@@ -499,6 +498,10 @@ body {
     margin: 41px 0 31px 0;
     display: flex;
     justify-content: space-between;
+}
+
+.player-slider__item {
+    pointer-events: none;
 }
 
 .player-slider__nav {
@@ -523,18 +526,18 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #999;
+    background-color: #999999;
     border: none;
     outline: 0;
     cursor: pointer;
 }
 
 .player-slider__dot:hover {
-    background-color: #333;
+    background-color: #710707;
 }
 
 .player-slider__dot-active {
-    background-color: #333;
+    background-color: #333333;
 }
 
 .player-slider__arrow-right {
@@ -551,7 +554,51 @@ body {
 
 .player-slider__arrow-right:hover,
 .player-slider__arrow-left:hover {
-    filter: invert(99%) sepia(10%) saturate(0%) hue-rotate(147deg) brightness(87%) contrast(102%);
+    filter: invert(95%) sepia(97%) saturate(7481%) hue-rotate(2deg) brightness(49%) contrast(95%);
+}
+
+.gallery {
+    padding-top: 75px;
+    padding-bottom: 0;
+}
+
+.gallery__container {
+    position: relative;
+    max-height: 1960px;
+    margin-top: 75px;
+    overflow-y: hidden;
+}
+
+.gallery__container::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 360px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.gallery__inner-container {
+    -moz-column-count: 3;
+    column-count: 3;
+    gap: 24px 36px;
+}
+
+.gallery__inner-container > :first-child {
+    margin-top: 50px;
+}
+
+.gallery__inner-container > :nth-child(11) {
+    margin-top: 50px;
+}
+
+.gallery__img {
+    margin-bottom: 17px;
+}
+
+.tickets {
+    padding-top: 75px;
 }
 
 footer {

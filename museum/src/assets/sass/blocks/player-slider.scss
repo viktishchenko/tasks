@@ -4,6 +4,10 @@
   justify-content: space-between;
 }
 
+.player-slider__item {
+  pointer-events: none;
+}
+
 .player-slider__nav {
   max-width: 200px;
   margin: 0 auto;
@@ -23,17 +27,17 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #999;
+  background-color: $slider-link;
   border: none;
   outline: 0;
   cursor: pointer;
   @extend %transition;
   &:hover {
-    background-color: #333;
+    background-color: $dark-red;
   }
 }
 .player-slider__dot-active {
-  background-color: #333;
+  background-color: $slider-active;
 }
 .player-slider__arrow-right {
   background-image: url(../../../assets/img/player/player-slider/arrow_right.svg);
@@ -46,7 +50,7 @@
   background-color: transparent;
   @extend %transition;
   &:hover {
-    filter: invert(99%) sepia(10%) saturate(0%) hue-rotate(147deg)
-      brightness(87%) contrast(102%);
+    filter: invert(95%) sepia(97%) saturate(7481%) hue-rotate(2deg)
+      brightness(49%) contrast(95%);
   }
 }

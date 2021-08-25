@@ -1,0 +1,34 @@
+.gallery {
+  padding-top: 75px;
+  padding-bottom: 0;
+}
+
+.gallery__container {
+  position: relative;
+  max-height: 1960px;
+  margin-top: 75px;
+  overflow-y: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 360px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%); //;
+  }
+}
+
+.gallery__inner-container {
+  column-count: 3;
+  gap: 24px 36px;
+}
+.gallery__inner-container > :first-child {
+  margin-top: 50px;
+}
+.gallery__inner-container > :nth-child(11) {
+  margin-top: 50px;
+}
+.gallery__img {
+  margin-bottom: 17px;
+}
