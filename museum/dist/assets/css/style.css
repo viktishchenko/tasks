@@ -1,4 +1,5 @@
-.contacts__address-link, .tickets-btn, .tickets__amount-input, .tickets__amount-btn, .tickets-checkmark, .player-slider__arrow-right,
+.rolling__link,
+.git-user__link, .social-navigation__link, .contacts__address-link, .tickets-btn, .tickets__amount-input, .tickets__amount-btn, .tickets-checkmark, .player-slider__arrow-right,
 .player-slider__arrow-left, .player-slider__dot, .player__controls-fullscreen,
 .player__controls-volume,
 .player__controls-play, .player__button, .card__title::after, .card, .slider-btn, .slider__dot, .welcome__button, .navigation__item, .logo {
@@ -811,5 +812,112 @@ body {
 }
 
 footer {
-    border: 1px solid red;
+    background: #030303;
+}
+
+.footer__container {
+    display: flex;
+    padding-top: 75px;
+    padding-bottom: 40px;
+}
+
+.footer-navigation {
+    margin-left: 145px;
+}
+
+.navigation-footer {
+    flex-direction: column;
+    max-height: 150px;
+    flex-wrap: wrap;
+    min-width: 363px;
+    gap: 0 170px;
+}
+
+.navigation__link-footer {
+    margin-right: 0;
+}
+
+.social-navigation {
+    display: flex;
+    margin-left: auto;
+    align-items: flex-end;
+    margin-bottom: 7px;
+}
+
+.social-navigation__list {
+    display: flex;
+}
+
+.social-navigation__item {
+    margin-left: 24px;
+}
+
+.social-navigation__link {
+    width: 48px;
+    height: 48px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.social-navigation__link:hover {
+    border-color: #9d8665;
+}
+
+.social-navigation__link-youtube {
+    background: url(../../../assets/img/social/youtube.svg) no-repeat center;
+}
+
+.social-navigation__link-instagram {
+    background: url(../../../assets/img/social/instagram.svg) no-repeat center;
+}
+
+.social-navigation__link-facebook {
+    background: url(../../../assets/img/social/facebook.svg) no-repeat center;
+}
+
+.social-navigation__link-twitter {
+    background: url(../../../assets/img/social/twitter.svg) no-repeat center;
+}
+
+.social-navigation__link-pinterest {
+    background: url(../../../assets/img/social/pinterest.svg) no-repeat center;
+}
+
+.footer-hr {
+    color: #666;
+}
+
+.footer-copyright {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 75px;
+    padding-top: 41px;
+}
+
+.footer-copyright span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.footer-copyright span a {
+    color: white;
+    text-decoration: none;
+}
+
+.rolling__link:hover,
+.git-user__link:hover {
+    color: #9d8665;
+}
+
+.rolling {
+    margin-left: 92px;
 }

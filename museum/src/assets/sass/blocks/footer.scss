@@ -1,3 +1,104 @@
 footer {
-  border: 1px solid red;
+  background: $bg-dark;
+}
+
+.footer__container {
+  display: flex;
+  padding-top: 75px;
+  padding-bottom: 40px;
+}
+
+.footer-navigation {
+  margin-left: 145px;
+}
+
+.navigation-footer {
+  flex-direction: column;
+  max-height: 150px;
+  flex-wrap: wrap;
+  min-width: 363px;
+  gap: 0 170px;
+}
+
+.navigation__link-footer {
+  margin-right: 0;
+}
+
+.social-navigation {
+  display: flex;
+  margin-left: auto;
+  align-items: flex-end;
+  margin-bottom: 7px;
+}
+.social-navigation__list {
+  display: flex;
+}
+.social-navigation__item {
+  margin-left: 24px;
+}
+
+.social-navigation__link {
+  width: 48px;
+  height: 48px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $text-white;
+  border-radius: 50px;
+  display: inline-block;
+  @extend %transition;
+}
+.social-navigation__link:hover {
+  border-color: $font-gold;
+}
+
+.social-navigation__link-youtube {
+  background: url(../../../assets/img/social/youtube.svg) no-repeat center;
+}
+.social-navigation__link-instagram {
+  background: url(../../../assets/img/social/instagram.svg) no-repeat center;
+}
+.social-navigation__link-facebook {
+  background: url(../../../assets/img/social/facebook.svg) no-repeat center;
+}
+.social-navigation__link-twitter {
+  background: url(../../../assets/img/social/twitter.svg) no-repeat center;
+}
+.social-navigation__link-pinterest {
+  background: url(../../../assets/img/social/pinterest.svg) no-repeat center;
+}
+
+.footer-hr {
+  color: #666;
+}
+
+.footer-copyright {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  padding-top: 41px;
+}
+.footer-copyright span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+.footer-copyright span a {
+  color: white;
+  text-decoration: none;
+}
+.rolling__link,
+.git-user__link {
+  @extend %transition;
+  &:hover {
+    color: $font-gold;
+  }
+}
+
+.rolling {
+  margin-left: 92px;
 }
