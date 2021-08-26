@@ -105,6 +105,7 @@
   color: $text-black;
   @extend %transition;
   border: none;
+  cursor: pointer;
   background: transparent;
 }
 .tickets__amount-btn:hover {
@@ -137,8 +138,17 @@
   border: none;
   letter-spacing: 2px;
   color: $text-white;
+  cursor: pointer;
   @extend %transition;
 }
 .tickets-btn:hover {
   color: $font-gold;
+}
+.tickets-paralax {
+  height: 400px;
+  width: 100%;
+  margin-top: 60px;
+  background: url(../../../assets/img/parallax.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }

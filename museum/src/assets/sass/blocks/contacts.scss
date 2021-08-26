@@ -1,0 +1,38 @@
+.contacts {
+  padding-top: 15px;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__address {
+  margin-bottom: 37px;
+  @extend %font-prim;
+  @include font($size: 2.8rem, $height: 3.3rem, $weight: 500);
+  color: $text-black;
+}
+.contacts__address-list {
+  list-style: none;
+}
+.contacts__address-item {
+  margin-bottom: 20px;
+  @extend %font-prim;
+  @include font($size: 2.2rem, $height: 2.6rem, $weight: 300);
+  color: $text-black;
+}
+
+.contacts__address-link {
+  text-decoration: none;
+  color: $text-black;
+  @extend %transition;
+}
+.contacts__address-link:hover {
+  color: $font-gold;
+}
+
+.contacts__map {
+  height: 620px;
+  width: 960px;
+  background: url(../../../assets/img/map.jpg) no-repeat center;
+}

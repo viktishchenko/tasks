@@ -1,11 +1,11 @@
-.tickets-btn, .tickets__amount-input, .tickets__amount-btn, .tickets-checkmark, .player-slider__arrow-right,
+.contacts__address-link, .tickets-btn, .tickets__amount-input, .tickets__amount-btn, .tickets-checkmark, .player-slider__arrow-right,
 .player-slider__arrow-left, .player-slider__dot, .player__controls-fullscreen,
 .player__controls-volume,
 .player__controls-play, .player__button, .card__title::after, .card, .slider-btn, .slider__dot, .welcome__button, .navigation__item, .logo {
     transition: all 0.3s ease-out;
 }
 
-.tickets__amount-btn, .tickets-text, .tickets-subtitle, .card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .section__text, .navigation__item, body {
+.contacts__address-item, .contacts__address, .tickets__amount-btn, .tickets-text, .tickets-subtitle, .card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .section__text, .navigation__item, body {
     font-family: "Roboto", sans-serif;
 }
 
@@ -477,11 +477,16 @@ body {
     background: url(../../../assets/img/player/svg/controls_fullscreen_btn.svg) no-repeat center;
 }
 
+.player__controls-fullscreen,
+.player__controls-volume,
+.player__controls-play {
+    cursor: pointer;
+}
+
 .player__controls-fullscreen:hover,
 .player__controls-volume:hover,
 .player__controls-play:hover {
     filter: opacity(0.8);
-    cursor: pointer;
 }
 
 .progress {
@@ -710,6 +715,7 @@ body {
     line-height: 3.7rem;
     color: #000000;
     border: none;
+    cursor: pointer;
     background: transparent;
 }
 
@@ -742,10 +748,66 @@ body {
     border: none;
     letter-spacing: 2px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .tickets-btn:hover {
     color: #9d8665;
+}
+
+.tickets-paralax {
+    height: 400px;
+    width: 100%;
+    margin-top: 60px;
+    background: url(../../../assets/img/parallax.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contacts {
+    padding-top: 15px;
+}
+
+.contacts__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__address {
+    margin-bottom: 37px;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.3rem;
+    color: #000000;
+}
+
+.contacts__address-list {
+    list-style: none;
+}
+
+.contacts__address-item {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.6rem;
+    color: #000000;
+}
+
+.contacts__address-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.contacts__address-link:hover {
+    color: #9d8665;
+}
+
+.contacts__map {
+    height: 620px;
+    width: 960px;
+    background: url(../../../assets/img/map.jpg) no-repeat center;
 }
 
 footer {

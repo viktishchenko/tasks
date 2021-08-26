@@ -70,9 +70,9 @@
 .player__controls-volume,
 .player__controls-play {
   @extend %transition;
+  cursor: pointer;
   &:hover {
     filter: opacity(0.8);
-    cursor: pointer;
   }
 }
 
