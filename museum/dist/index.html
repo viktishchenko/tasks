@@ -223,7 +223,7 @@
         />
       </div>
     </section>
-     <div class="section video" id="video">
+     <section class="section video" id="video">
       <div class="container video__container">
         <div class="video__content">
           <h2 class="section__title section__title-gold">Video journey</h2>
@@ -306,7 +306,7 @@
           <button class="player-slider__arrow-right player-slider__btn"></button>
         </div>
       </div>
-    </div>
+    </section>
      <section class="section gallery section-dark" id="gallery">
       <div class="container">
         <h2 class="section__title">Art Gallery</h2>
@@ -426,6 +426,80 @@
         <h2 class="section__title section__title-gold section__title-underline">
           Buy tickets
         </h2>
+        <div class="tickets__container">
+          <div class="tickets__img"></div>
+          <div class="tickets__type">
+            <h3 class="tickets-subtitle">Ticket Type</h3>
+            <label class="tickets-text tickets__radio-label"
+              ><input
+                class="tickets__radio-input"
+                type="radio"
+                name="tickets-type"
+                checked
+              />
+              <span class="tickets-checkmark"></span>Permanent exhibition</label
+            >
+            <label class="tickets-text tickets__radio-label"
+              ><input
+                class="tickets__radio-input"
+                type="radio"
+                name="tickets-type"
+              />
+              <span class="tickets-checkmark"></span>Temporary exhibition</label
+            >
+            <label class="tickets-text tickets__radio-label"
+              ><input
+                class="tickets__radio-input"
+                type="radio"
+                name="tickets-type"
+              />
+              <span class="tickets-checkmark"></span>Combined Admission</label
+            >
+          </div>
+          <div class="tickets__amount">
+            <h3 class="tickets-subtitle">Amount</h3>
+            <div class="tickets__amounts-basic">
+              <label for="basic-tickets" class="tickets-text">Basic 18+</label>
+              <div class="tickets__amount-control">
+                <button class="tickets__amount-btn" type="button">–</button>
+                <input
+                  class="tickets__amount-input tickets-text"
+                  min="0"
+                  max="20"
+                  value="1"
+                  readonly
+                  class="number"
+                />
+                <button class="tickets__amount-btn" type="button">+</button>
+              </div>
+            </div>
+            <div class="tickets__amounts-senior">
+              <label for="basic-tickets" class="tickets-text">Senior 65+</label>
+              <div class="tickets__amount-control">
+                <button
+                  class="tickets__amount-btn"
+                  type="button"
+                  onclick="this.nextElementSibling.stepDown()"
+                >
+                  –
+                </button>
+                <input
+                  class="tickets__amount-input tickets-text"
+                  min="0"
+                  max="20"
+                  value="1"
+                  readonly
+                  class="number"
+                />
+                <button class="tickets__amount-btn" type="button">+</button>
+              </div>
+            </div>
+            <h3 class="tickets-subtitle tickets-total">
+              Total €<span class="tickets__amount-total">220</span>
+            </h3>
+            <button class="tickets-text tickets-btn">Buy Now</button>
+          </div>
+        </div>
       </div>
     </section>
     
