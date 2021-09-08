@@ -1,0 +1,90 @@
+<div class="modal" id="tickets-modal" data-animation="slideInOutLeft">
+  <div class="modal-dialog">
+    <button class="modal-close" aria-label="close modal" data-close>✕</button>
+    <section class="booking">
+      <div class="booking__form">
+        <span class="booking__logo"></span>
+        <h2 class="booking__title">Booking tickets</h2>
+        <p class="booking__text booking__text-size booking__text-after">
+          Tour to Louvre
+        </p>
+        <form action="#" method="get">
+          <div class="form-row layout-2-column">
+            <div class="layout-2-column__item">
+              <label class="form__label" id="form__date" for="form__date"
+                >Date</label
+              >
+              <input
+                class="form__input layout-2-column__input form__date"
+                data-label="form__date"
+                type="date"
+                name="form__date"
+                required
+              />
+            </div>
+            <div class="layout-2-column__item">
+              <label class="form__label" id="form__time" for="form__time"
+                >Time</label
+              >
+              <input
+                class="form__input layout-2-column__input form__time"
+                data-label="form__time"
+                type="time"
+                name="form__time"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="form__label" id="form__name" for="form__name"
+              >Name</label
+            >
+            <input
+              class="form__input form__name"
+              data-label="form__name"
+              type="text"
+              name="form__name"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <label class="form__label" id="form__email" for="form__email"
+              >E-mail</label
+            >
+            <input
+              class="form__input form__email"
+              data-label="form-emaile"
+              type="email"
+              name="form__email"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <label class="form__label" id="form__phone" for="form__phone"
+              >Phone</label
+            >
+            <input
+              class="form__input form__phone"
+              data-label="form__phone"
+              type="tel"
+              name="form__phone"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <select class="form__label" id="form-number">
+              <option value="0">Ticket Type</option>
+              <option value="1">Permanent exhibition</option>
+              <option value="2">Temporary exhibition</option>
+              <option value="3">Combined Admission</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="booking__overview">
+        <h2 class="booking__overview-title">Overview</h2>
+        <p class="booking__text booking__overview-size">Tour to Louvre</p>
+      </div>
+    </section>
+  </div>
+</div>

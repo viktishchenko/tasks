@@ -313,106 +313,76 @@
           <div class="gallery__inner-container">
             <img
               src="../../assets/img/galery/galery2.jpg"
-              width="456"
-              height="570"
               alt="1"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery1.jpg"
-              width="456"
-              height="570"
               alt="6"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery4.jpg"
-              width="456"
-              height="456"
               alt="3"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery6.jpg"
-              width="456"
-              height="570"
               alt="4"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery11.jpg"
-              width="456"
-              height="456"
               alt="5"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery10.jpg"
-              width="456"
-              height="456"
               alt="2"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery8.jpg"
-              width="456"
-              height="570"
               alt="7"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery3.jpg"
-              width="456"
-              height="570"
               alt="8"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery7.jpg"
-              width="456"
-              height="570"
               alt="9"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery13.jpg"
-              width="456"
-              height="348"
               alt="10"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery5.jpg"
-              width="456"
-              height="570"
               alt="11"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery9.jpg"
-              width="456"
-              height="456"
               alt="12"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery15.jpg"
-              width="456"
-              height="456"
               alt="13"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery12.jpg"
-              width="456"
-              height="456"
               alt="14"
               class="gallery__img"
             />
             <img
               src="../../assets/img/galery/galery14.jpg"
-              width="456"
-              height="570"
               alt="15"
               class="gallery__img"
             />
@@ -496,8 +466,100 @@
             <h3 class="tickets-subtitle tickets-total">
               Total €<span class="tickets__amount-total">220</span>
             </h3>
-            <button class="tickets-text tickets-btn">Buy Now</button>
+            <button class="tickets-text tickets-btn" data-open="tickets-modal">
+              Buy Now
+            </button>
           </div>
+        </div>
+      </div>
+      <div class="modal" id="tickets-modal" data-animation="slideInOutLeft">
+        <div class="modal-dialog">
+          <button class="modal-close" aria-label="close modal" data-close>✕</button>
+          <section class="booking">
+            <div class="booking__form">
+              <span class="booking__logo"></span>
+              <h2 class="booking__title">Booking tickets</h2>
+              <p class="booking__text booking__text-size booking__text-after">
+                Tour to Louvre
+              </p>
+              <form action="#" method="get">
+                <div class="form-row layout-2-column">
+                  <div class="layout-2-column__item">
+                    <label class="form__label" id="form__date" for="form__date"
+                      >Date</label
+                    >
+                    <input
+                      class="form__input layout-2-column__input form__date"
+                      data-label="form__date"
+                      type="date"
+                      name="form__date"
+                      required
+                    />
+                  </div>
+                  <div class="layout-2-column__item">
+                    <label class="form__label" id="form__time" for="form__time"
+                      >Time</label
+                    >
+                    <input
+                      class="form__input layout-2-column__input form__time"
+                      data-label="form__time"
+                      type="time"
+                      name="form__time"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label class="form__label" id="form__name" for="form__name"
+                    >Name</label
+                  >
+                  <input
+                    class="form__input form__name"
+                    data-label="form__name"
+                    type="text"
+                    name="form__name"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <label class="form__label" id="form__email" for="form__email"
+                    >E-mail</label
+                  >
+                  <input
+                    class="form__input form__email"
+                    data-label="form-emaile"
+                    type="email"
+                    name="form__email"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <label class="form__label" id="form__phone" for="form__phone"
+                    >Phone</label
+                  >
+                  <input
+                    class="form__input form__phone"
+                    data-label="form__phone"
+                    type="tel"
+                    name="form__phone"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <select class="form__label" id="form-number">
+                    <option value="0">Ticket Type</option>
+                    <option value="1">Permanent exhibition</option>
+                    <option value="2">Temporary exhibition</option>
+                    <option value="3">Combined Admission</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="booking__overview">
+              <h2 class="booking__overview-title">Overview</h2>
+              <p class="booking__text booking__overview-size">Tour to Louvre</p>
+            </div>
+          </section>
         </div>
       </div>
       <div class="tickets-paralax"></div>

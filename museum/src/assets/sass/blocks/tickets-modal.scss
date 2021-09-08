@@ -1,0 +1,241 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: $text-white;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+  z-index: 10;
+}
+
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-dialog {
+  position: relative;
+  width: 970px;
+  padding-bottom: 7px;
+  background: #fff;
+  cursor: default;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 50px;
+  transform: translate(198%, -84%);
+  border: none;
+  font-size: 36px;
+  color: #030303;
+  background: transparent;
+  @extend %transition;
+  &:hover {
+    color: $font-gold;
+    cursor: pointer;
+  }
+}
+
+.booking {
+  display: flex;
+}
+.booking__form {
+  width: 400px;
+}
+.booking__logo {
+  display: block;
+  width: 86px;
+  height: 42px;
+  background: url(../../../assets/img/tickets-modal/svg/logo.svg) no-repeat;
+}
+.booking__title {
+  margin-bottom: 14px;
+  @extend %font-add;
+  @include font($size: 5rem, $height: 5.5rem, $weight: normal);
+  text-transform: uppercase;
+  color: $font-gold;
+}
+.booking__text {
+  position: relative;
+  @extend %font-prim;
+  @include font($size: 1.8rem, $height: 2.1rem, $weight: normal);
+  color: $dark-red;
+}
+.booking__text-size {
+  @include font($size: 1.8rem, $height: 2.1rem, $weight: normal);
+  margin-bottom: 60px;
+}
+.booking__text-after {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -14px;
+    width: 400px;
+    height: 2px;
+    opacity: 0.9;
+    background-color: $dark-red;
+  }
+}
+
+.booking__overview {
+  width: 530px;
+  height: 665px;
+  margin-left: 39px;
+  padding: 26px 30px;
+  border: 1px solid black;
+}
+
+.booking__overview-size {
+  @include font($size: 2.2rem, $height: 2.6rem, $weight: 500);
+}
+
+.booking__overview-title {
+  margin-bottom: 3px;
+  @extend %font-prim;
+  @include font($size: 3.2rem, $height: 3.7rem, $weight: 500);
+  color: #272727;
+}
+
+.booking form {
+  padding-top: 15px;
+}
+
+.form-row {
+  position: relative;
+  margin-bottom: 19px;
+}
+
+.layout-2-column {
+  @include columns($width: 47%);
+}
+
+.layout-2-column__item {
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  min-width: 100px;
+  margin-left: 16px;
+  padding-left: 3px;
+  @extend %font-prim;
+  @include font($size: 1.8rem, $height: 2.1rem, $weight: 400);
+  background-color: white;
+  color: #030303;
+}
+
+.form__input {
+  width: 100%;
+  padding: 14px 0;
+  padding-right: 3px;
+  border: 1px solid black;
+  text-align: center;
+  &:focus-visible {
+    border: 1px solid $font-gold;
+    outline: none;
+  }
+}
+.layout-2-column__input {
+  width: 190px;
+  height: 45px;
+}
+
+.label-hide {
+  display: none;
+}
+
+.form__date {
+  background: url(../../../assets/img/tickets-modal/svg/date.svg) no-repeat left;
+  background-position: 13px center;
+  background-size: 15px;
+  &::-webkit-calendar-picker-indicator {
+    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg)
+      no-repeat;
+    width: 22px;
+  }
+  &::-webkit-datetime-edit {
+    margin-left: 30px;
+  }
+}
+
+.form__time {
+  background: url(../../../assets/img/tickets-modal/svg/time.svg) no-repeat left;
+  background-position: 13px center;
+  background-size: 15px;
+  &::-webkit-calendar-picker-indicator {
+    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg)
+      no-repeat;
+    width: 22px;
+  }
+  &::-webkit-datetime-edit {
+    margin-left: 30px;
+  }
+}
+
+.form__name {
+  background: url(../../../assets/img/tickets-modal/svg/name.svg) no-repeat left;
+  background-position: 13px center;
+  background-size: 15px;
+}
+
+.form__email {
+  background: url(../../../assets/img/tickets-modal/svg/email.svg) no-repeat
+    left;
+  background-position: 13px center;
+  background-size: 15px;
+}
+
+.form__phone {
+  background: url(../../../assets/img/tickets-modal/svg/tel.svg) no-repeat left;
+  background-position: 13px center;
+  background-size: 15px;
+}
+
+.form__number {
+  background: url(../../../assets/img/tickets-modal/svg/ballot.svg) no-repeat
+    left;
+  background-position: 13px center;
+  background-size: 15px;
+  &::-webkit-calendar-picker-indicator {
+    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg)
+      no-repeat;
+    width: 22px;
+  }
+  &::-webkit-datetime-edit {
+    margin-left: 30px;
+  }
+}
+
+// Animation
+
+[data-animation] .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+[data-animation].is-visible .modal-dialog {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+[data-animation="slideInOutLeft"] .modal-dialog {
+  transform: translateX(-100%);
+}
+
+[data-animation="slideInOutLeft"].is-visible .modal-dialog {
+  transform: none;
+}

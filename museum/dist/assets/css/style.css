@@ -1,16 +1,16 @@
 .rolling__link,
-.git-user__link, .social-navigation__link, .contacts__address-link, .tickets-btn, .tickets__amount-input, .tickets__amount-btn, .tickets-checkmark, .player-slider__arrow-right,
+.git-user__link, .social-navigation__link, .contacts__address-link, .modal-close, .tickets-btn, .tickets__amount-input, .tickets__amount-btn, .tickets-checkmark, .player-slider__arrow-right,
 .player-slider__arrow-left, .player-slider__dot, .player__controls-fullscreen,
 .player__controls-volume,
 .player__controls-play, .player__button, .card__title::after, .card, .slider-btn, .slider__dot, .welcome__button, .navigation__item, .logo {
     transition: all 0.3s ease-out;
 }
 
-.contacts__address-item, .contacts__address, .tickets__amount-btn, .tickets-text, .tickets-subtitle, .card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .section__text, .navigation__item, body {
+.contacts__address-item, .contacts__address, .form__label, .booking__overview-title, .booking__text, .tickets__amount-btn, .tickets-text, .tickets-subtitle, .card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .section__text, .navigation__item, body {
     font-family: "Roboto", sans-serif;
 }
 
-.card__title, .section__title, .header-logo {
+.booking__title, .card__title, .section__title, .header-logo {
     font-family: "Forum", cursive;
 }
 
@@ -763,6 +763,273 @@ body {
     background: url(../../../assets/img/parallax.jpg);
     background-size: cover;
     background-attachment: fixed;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: #ffffff;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+    z-index: 10;
+}
+
+.modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-dialog {
+    position: relative;
+    width: 970px;
+    padding-bottom: 7px;
+    background: #fff;
+    cursor: default;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 50px;
+    transform: translate(198%, -84%);
+    border: none;
+    font-size: 36px;
+    color: #030303;
+    background: transparent;
+}
+
+.modal-close:hover {
+    color: #9d8665;
+    cursor: pointer;
+}
+
+.booking {
+    display: flex;
+}
+
+.booking__form {
+    width: 400px;
+}
+
+.booking__logo {
+    display: block;
+    width: 86px;
+    height: 42px;
+    background: url(../../../assets/img/tickets-modal/svg/logo.svg) no-repeat;
+}
+
+.booking__title {
+    margin-bottom: 14px;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 5.5rem;
+    text-transform: uppercase;
+    color: #9d8665;
+}
+
+.booking__text {
+    position: relative;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2.1rem;
+    color: #710707;
+}
+
+.booking__text-size {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2.1rem;
+    margin-bottom: 60px;
+}
+
+.booking__text-after::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -14px;
+    width: 400px;
+    height: 2px;
+    opacity: 0.9;
+    background-color: #710707;
+}
+
+.booking__overview {
+    width: 530px;
+    height: 665px;
+    margin-left: 39px;
+    padding: 26px 30px;
+    border: 1px solid black;
+}
+
+.booking__overview-size {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.6rem;
+}
+
+.booking__overview-title {
+    margin-bottom: 3px;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.7rem;
+    color: #272727;
+}
+
+.booking form {
+    padding-top: 15px;
+}
+
+.form-row {
+    position: relative;
+    margin-bottom: 19px;
+}
+
+.layout-2-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.layout-2-column > * {
+    flex-basis: 47%;
+}
+
+.layout-2-column__item {
+    position: relative;
+}
+
+.form__label {
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    min-width: 100px;
+    margin-left: 16px;
+    padding-left: 3px;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1rem;
+    background-color: white;
+    color: #030303;
+}
+
+.form__input {
+    width: 100%;
+    padding: 14px 0;
+    padding-right: 3px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.form__input:focus-visible {
+    border: 1px solid #9d8665;
+    outline: none;
+}
+
+.layout-2-column__input {
+    width: 190px;
+    height: 45px;
+}
+
+.label-hide {
+    display: none;
+}
+
+.form__date {
+    background: url(../../../assets/img/tickets-modal/svg/date.svg) no-repeat left;
+    background-position: 13px center;
+    background-size: 15px;
+}
+
+.form__date::-webkit-calendar-picker-indicator {
+    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
+    width: 22px;
+}
+
+.form__date::-webkit-datetime-edit {
+    margin-left: 30px;
+}
+
+.form__time {
+    background: url(../../../assets/img/tickets-modal/svg/time.svg) no-repeat left;
+    background-position: 13px center;
+    background-size: 15px;
+}
+
+.form__time::-webkit-calendar-picker-indicator {
+    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
+    width: 22px;
+}
+
+.form__time::-webkit-datetime-edit {
+    margin-left: 30px;
+}
+
+.form__name {
+    background: url(../../../assets/img/tickets-modal/svg/name.svg) no-repeat left;
+    background-position: 13px center;
+    background-size: 15px;
+}
+
+.form__email {
+    background: url(../../../assets/img/tickets-modal/svg/email.svg) no-repeat left;
+    background-position: 13px center;
+    background-size: 15px;
+}
+
+.form__phone {
+    background: url(../../../assets/img/tickets-modal/svg/tel.svg) no-repeat left;
+    background-position: 13px center;
+    background-size: 15px;
+}
+
+.form__number {
+    background: url(../../../assets/img/tickets-modal/svg/ballot.svg) no-repeat left;
+    background-position: 13px center;
+    background-size: 15px;
+}
+
+.form__number::-webkit-calendar-picker-indicator {
+    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
+    width: 22px;
+}
+
+.form__number::-webkit-datetime-edit {
+    margin-left: 30px;
+}
+
+[data-animation] .modal-dialog {
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+[data-animation].is-visible .modal-dialog {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+[data-animation=slideInOutLeft] .modal-dialog {
+    transform: translateX(-100%);
+}
+
+[data-animation=slideInOutLeft].is-visible .modal-dialog {
+    transform: none;
 }
 
 .contacts {
