@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="pngegg.png" type="image/x-icon" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+<div class="container">
+        <div class="calculator-grid">
+        <div class="output">
+          <input disabled type="text" id="display" value="0" />
+        </div>
+        <button title="All Clean - Очистить Все" id="ce" class="span-two clear-btn">AC</button>
+        <button title="Clean Entry - Очистить Запись" id="c" class="clear-btn">CE</button>
+        <button title="Деление -Division" class="operator">÷</button>
+        <button title="Один - One" class="number">1</button>
+        <button title="Два - Two" class="number">2</button>
+        <button title="Три - Three" class="number">3</button>
+        <button title="Умножение - Multiplication" class="operator">*</button>
+        <button title="Четыре - Four" class="number">4</button>
+        <button title="Пять - Five" class="number">5</button>
+        <button title="Шесть -Six" class="number">6</button>
+        <button title="Сложение - Addition " class="operator">+</button>
+        <button title="Семь - Seven" class="number">7</button>
+        <button title="Восемь - Eight" class="number">8</button>
+        <button title="Девять - Nine" class="number">9</button>
+        <button title="Вычитание - Substraction" class="operator">-</button>
+        <button title="Ноль - Ziro" class="number">0</button>
+        <button title="Квадратный корень - Square root" class="square">√</button>
+        <button title="Возведение в степень - Exponentiation" class="operator">x<sup>n</button>
+        <button title="Знак минус - minus" class="minus">±</button>
+        <button title="Десятичный Делитель - Decimal Division" id="desimal">.</button>
+        <button title="Равно - Equaliy" id="result" class="span-three operator">=</button>
+      </div>
+      <div class="calcdescr">
+        <div class="wrapper">
+          <div class="blertop"></div>
+                  <h2>Instruction to cross-check</h2>
+        <p>Уважаемые проверяющие. Для многих из нас это первая программа на JavaScript. Проверяйте задание без фанатизма. Ваша задача не сломать приложение используя недопустимые числа и операции, а проверить его функциональность на простых примерах, операциях с дву- и трёхзначными числами. Если пункт требований выполнен не полностью, постарайтесь определить какая часть пункта выполнена и поставить соответствующее количество баллов.</p>
+        <h3>Примеры вычислений для проверки работоспособности калькулятора и его соответствия критериям</h3>
+        <p>Примеры ориентировочные, числа могут быть другими. Каждое правильно выполненное вычисление оцениваем в 2 балла. Если вычисления выполняются на лету и результат выводится без клика по кнопке "равно", это не является ошибкой.</p>
+<h4>Базовая функциональность +10</h4>
+<ol>
+  <li><span class="butt">1</span><span class="butt">+</span><span class="butt">2</span><span class="butt">=</span><span class="butt">3</span></li>
+  <li><span class="butt">23</span><span class="butt">+</span><span class="butt">69.5</span><span class="butt">=</span><span class="butt">92.5</span></li>
+  <li><span class="butt">74</span><span class="butt">*</span><span class="butt">3</span><span class="butt">-</span><span class="butt">5</span><span class="butt">=</span><span class="butt">217</span></li>
+  <li><span class="butt">2</span><span class="butt">+</span><span class="butt">3</span><span class="butt">=</span><span class="butt">5</span> продолжаем ввод <span class="butt">4</span><span class="butt">=</span><span class="butt">4</span> - после равно следующая цифра перезаписывает результат</li>
+  <li>есть кнопка, позволяющая очистить результат</li>
+</ol>
+<h4>Дополнительные математические операции +10</h4>
+<ol>
+    <li><span class="butt">25</span><span class="butt">√</span><span class="butt">=</span><span class="butt">5</span></li>
+    <li><span class="butt">9</span><span class="butt">√</span><span class="butt">+</span><span class="butt">1</span><span class="butt">=</span><span class="butt">4</span></li>
+    <li><span class="butt">2</span><span class="butt">x<sup>n</span><span class="butt">2</span><span class="butt">=</span><span class="butt">4</span></li>
+    <li><span class="butt">15</span><span class="butt">x<sup>n</span><span class="butt">3</span><span class="butt">=</span><span class="butt">3375</span></li>
+    <li><span class="butt">10.1</span><span class="butt">x<sup>n</span><span class="butt">3</span><span class="butt">=</span><span class="butt">1030.301</span></li>
+</ol>
+<h4>Действия с отрицательными числами +10</h4>
+<ol>
+<li><span class="butt">9</span><span class="butt">±</span><span class="butt">÷</span><span class="butt">3</span><span class="butt">±</span><span class="butt">=</span><span class="butt">3</span> (-9 ÷ -3 => 3)</li>
+ <li><span class="butt">2</span><span class="butt">+</span><span class="butt">2</span><span class="butt">±</span><span class="butt">=</span><span class="butt">0</span> (2 + -2 => 0)</li>
+  <li><span class="butt">2</span><span class="butt">÷</span><span class="butt">2</span><span class="butt">±</span><span class="butt">=</span><span class="butt">-1</span> (2 ÷ -2 => -1)</li>
+  <li><span class="butt">9</span><span class="butt">±</span><span class="butt">x<sup>n</span><span class="butt">3</span><span class="butt">=</span><span class="butt">-729</span></li>
+  <li><span class="butt">9</span><span class="butt">±</span><span class="butt">√</span><span class="butt">=</span><span class="butt">Error</span> уведомление об ошибке</li>
+</ol>
+<h4>Действия с дробями +10</h4>
+<ol>
+  <li><span class="butt">0.1</span><span class="butt">+</span><span class="butt">0.2</span><span class="butt">=</span><span class="butt">0.3</span></li>
+  <li><span class="butt">0.4</span><span class="butt">-</span><span class="butt">0.1</span><span class="butt">=</span><span class="butt">0.3</span></li>
+  <li><span class="butt">0.0004</span><span class="butt">+</span><span class="butt">0.0004</span><span class="butt">=</span><span class="butt">0.0008</span></li>
+  <li><span class="butt">0.1</span><span class="butt">±</span><span class="butt">*</span><span class="butt">0.2</span><span class="butt">=</span><span class="butt">-0.02</span> (-0.1 * 0.2 => -0.02)</li>
+  <li><span class="butt">0.15</span><span class="butt">±</span><span class="butt">+</span><span class="butt">0.15</span><span class="butt">±</span><span class="butt">=</span><span class="butt">-0.3</span> (-0.15 + -0.15 => -0.3)</li>
+</ol>
+<h3>Спасибо за проверку работы.</h3>
+<div class="bler"></div>
+        </div>
+  </div>
+</div>
+    </div>
+  </body>
+</html>
