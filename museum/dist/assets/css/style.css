@@ -420,13 +420,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../../../assets/img/player/Video_journey.jpg) no-repeat center center/cover;
+    background: url(../../assets/img/player/Video_journey.jpg) no-repeat center center/cover;
 }
 
 .player__button {
     width: 220px;
     height: 220px;
-    background: url(../../../assets/img/player/svg/player_btn.svg);
+    background: url(../../assets/img/player/svg/player_btn.svg);
     border: none;
     cursor: pointer;
 }
@@ -451,7 +451,7 @@ body {
     margin: 0 50px 0 30px;
     width: 23px;
     height: 30px;
-    background: url(../../../assets/img/player/svg/controls_play_btn.svg) no-repeat center;
+    background: url(../../assets/img/player/svg/controls_play_btn.svg) no-repeat center;
 }
 
 .player__controls-progress {
@@ -463,7 +463,7 @@ body {
     margin-right: 50px;
     width: 38px;
     height: 30px;
-    background: url(../../../assets/img/player/svg/controls_volume_btn.svg) no-repeat center;
+    background: url(../../assets/img/player/svg/controls_volume_btn.svg) no-repeat center;
 }
 
 .player__controls-volume-input {
@@ -475,7 +475,7 @@ body {
     margin-right: 30px;
     width: 36px;
     height: 36px;
-    background: url(../../../assets/img/player/svg/controls_fullscreen_btn.svg) no-repeat center;
+    background: url(../../assets/img/player/svg/controls_fullscreen_btn.svg) no-repeat center;
 }
 
 .player__controls-fullscreen,
@@ -523,7 +523,7 @@ body {
 }
 
 .player-slider__arrow-left {
-    background-image: url(../../../assets/img/player/player-slider/arrow_left.svg);
+    background-image: url(../../assets/img/player/player-slider/arrow_left.svg);
     background-repeat: no-repeat;
     text-decoration: none;
 }
@@ -547,7 +547,7 @@ body {
 }
 
 .player-slider__arrow-right {
-    background-image: url(../../../assets/img/player/player-slider/arrow_right.svg);
+    background-image: url(../../assets/img/player/player-slider/arrow_right.svg);
     background-repeat: no-repeat;
     text-decoration: none;
 }
@@ -760,7 +760,7 @@ body {
     height: 400px;
     width: 100%;
     margin-top: 60px;
-    background: url(../../../assets/img/parallax.jpg);
+    background: url(../../assets/img/parallax.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -825,7 +825,7 @@ body {
     display: block;
     width: 86px;
     height: 42px;
-    background: url(../../../assets/img/tickets-modal/svg/logo.svg) no-repeat;
+    background: url(../../assets/img/tickets-modal/svg/logo.svg) no-repeat;
 }
 
 .booking__title {
@@ -952,13 +952,13 @@ body {
 }
 
 .form__date {
-    background: url(../../../assets/img/tickets-modal/svg/date.svg) no-repeat left;
+    background: url(../../assets/img/tickets-modal/svg/date.svg) no-repeat left;
     background-position: 13px center;
     background-size: 15px;
 }
 
 .form__date::-webkit-calendar-picker-indicator {
-    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
+    background: url(../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
     width: 22px;
 }
 
@@ -967,13 +967,13 @@ body {
 }
 
 .form__time {
-    background: url(../../../assets/img/tickets-modal/svg/time.svg) no-repeat left;
+    background: url(../../assets/img/tickets-modal/svg/time.svg) no-repeat left;
     background-position: 13px center;
     background-size: 15px;
 }
 
 .form__time::-webkit-calendar-picker-indicator {
-    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
+    background: url(../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
     width: 22px;
 }
 
@@ -982,31 +982,31 @@ body {
 }
 
 .form__name {
-    background: url(../../../assets/img/tickets-modal/svg/name.svg) no-repeat left;
+    background: url(../../assets/img/tickets-modal/svg/name.svg) no-repeat left;
     background-position: 13px center;
     background-size: 15px;
 }
 
 .form__email {
-    background: url(../../../assets/img/tickets-modal/svg/email.svg) no-repeat left;
+    background: url(../../assets/img/tickets-modal/svg/email.svg) no-repeat left;
     background-position: 13px center;
     background-size: 15px;
 }
 
 .form__phone {
-    background: url(../../../assets/img/tickets-modal/svg/tel.svg) no-repeat left;
+    background: url(../../assets/img/tickets-modal/svg/tel.svg) no-repeat left;
     background-position: 13px center;
     background-size: 15px;
 }
 
 .form__number {
-    background: url(../../../assets/img/tickets-modal/svg/ballot.svg) no-repeat left;
+    background: url(../../assets/img/tickets-modal/svg/ballot.svg) no-repeat left;
     background-position: 13px center;
     background-size: 15px;
 }
 
 .form__number::-webkit-calendar-picker-indicator {
-    background: url(../../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
+    background: url(../../assets/img/tickets-modal/svg/arrow-down.svg) no-repeat;
     width: 22px;
 }
 
@@ -1075,7 +1075,7 @@ body {
 .contacts__map {
     height: 620px;
     width: 960px;
-    background: url(../../../assets/img/map.jpg) no-repeat center;
+    background: url(../../assets/img/map.jpg) no-repeat center;
 }
 
 footer {
@@ -1134,23 +1134,23 @@ footer {
 }
 
 .social-navigation__link-youtube {
-    background: url(../../../assets/img/social/youtube.svg) no-repeat center;
+    background: url(../../assets/img/social/youtube.svg) no-repeat center;
 }
 
 .social-navigation__link-instagram {
-    background: url(../../../assets/img/social/instagram.svg) no-repeat center;
+    background: url(../../assets/img/social/instagram.svg) no-repeat center;
 }
 
 .social-navigation__link-facebook {
-    background: url(../../../assets/img/social/facebook.svg) no-repeat center;
+    background: url(../../assets/img/social/facebook.svg) no-repeat center;
 }
 
 .social-navigation__link-twitter {
-    background: url(../../../assets/img/social/twitter.svg) no-repeat center;
+    background: url(../../assets/img/social/twitter.svg) no-repeat center;
 }
 
 .social-navigation__link-pinterest {
-    background: url(../../../assets/img/social/pinterest.svg) no-repeat center;
+    background: url(../../assets/img/social/pinterest.svg) no-repeat center;
 }
 
 .footer-hr {

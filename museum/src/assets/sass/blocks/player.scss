@@ -8,13 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../../../assets/img/player/Video_journey.jpg) no-repeat center
+  background: url(../../assets/img/player/Video_journey.jpg) no-repeat center
     center/cover;
 }
 .player__button {
   width: 220px;
   height: 220px;
-  background: url(../../../assets/img/player/svg/player_btn.svg);
+  background: url(../../assets/img/player/svg/player_btn.svg);
   border: none;
   cursor: pointer;
   @extend %transition;
@@ -38,8 +38,8 @@
   margin: 0 50px 0 30px;
   width: 23px;
   height: 30px;
-  background: url(../../../assets/img/player/svg/controls_play_btn.svg)
-    no-repeat center;
+  background: url(../../assets/img/player/svg/controls_play_btn.svg) no-repeat
+    center;
 }
 .player__controls-progress {
   margin-right: 50px;
@@ -49,8 +49,8 @@
   margin-right: 50px;
   width: 38px;
   height: 30px;
-  background: url(../../../assets/img/player/svg/controls_volume_btn.svg)
-    no-repeat center;
+  background: url(../../assets/img/player/svg/controls_volume_btn.svg) no-repeat
+    center;
 }
 
 .player__controls-volume-input {
@@ -62,7 +62,7 @@
   margin-right: 30px;
   width: 36px;
   height: 36px;
-  background: url(../../../assets/img/player/svg/controls_fullscreen_btn.svg)
+  background: url(../../assets/img/player/svg/controls_fullscreen_btn.svg)
     no-repeat center;
 }
 
