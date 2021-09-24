@@ -33,6 +33,7 @@ const bookingInputs = document.querySelectorAll(".form__input");
 for (el of bookingInputs) {
   el.addEventListener("click", function () {
     const labelName = this.dataset.label;
+    console.log(labelName);
     document.getElementById(labelName).classList.add("label-hide");
   });
 }
