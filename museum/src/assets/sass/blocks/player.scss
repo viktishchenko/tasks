@@ -42,11 +42,11 @@
     center;
 }
 .player__controls-progress {
-  margin-right: 50px;
+  margin-right: 52px;
   flex-grow: 1;
 }
 .player__controls-volume {
-  margin-right: 50px;
+  margin-right: 47px;
   width: 38px;
   height: 30px;
   background: url(../../assets/img/player/svg/controls_volume_btn.svg) no-repeat
@@ -54,7 +54,7 @@
 }
 
 .player__controls-volume-input {
-  max-width: 155px;
+  width: 155px;
   margin-right: 50px;
 }
 

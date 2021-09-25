@@ -33,7 +33,7 @@
 
 .slider__value {
   display: flex;
-  margin-right: 50px;
+  margin-right: 55px;
   min-width: 76px;
   @extend %font-prim;
   @include font($size: 2.2rem, $height: 4rem, $weight: 400);
@@ -45,8 +45,8 @@
 .slider__dots {
   display: flex;
   justify-content: space-between;
-  min-width: 196px;
-  margin-right: 45px;
+  min-width: 180px;
+  margin-right: 60px;
 }
 .slider__dot {
   width: 16px;

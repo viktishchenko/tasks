@@ -1,5 +1,5 @@
 .contacts {
-  padding-top: 15px;
+  padding-top: 0;
 }
 
 .contacts__container {
@@ -7,7 +7,7 @@
   justify-content: space-between;
 }
 .contacts__address {
-  margin-bottom: 37px;
+  margin-bottom: 50px;
   @extend %font-prim;
   @include font($size: 2.8rem, $height: 3.3rem, $weight: 500);
   color: $text-black;
@@ -16,7 +16,7 @@
   list-style: none;
 }
 .contacts__address-item {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   @extend %font-prim;
   @include font($size: 2.2rem, $height: 2.6rem, $weight: 300);
   color: $text-black;

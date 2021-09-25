@@ -59,7 +59,7 @@
   background: url(../../assets/img/tickets-modal/svg/logo.svg) no-repeat;
 }
 .booking__title {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   @extend %font-add;
   @include font($size: 5rem, $height: 5.5rem, $weight: normal);
   text-transform: uppercase;
@@ -92,8 +92,8 @@
 .booking__overview {
   width: 530px;
   height: 665px;
-  margin-left: 39px;
-  padding: 26px 30px;
+  margin-left: 40px;
+  padding: 25px 30px;
   border: 1px solid black;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .booking__overview-title {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   @extend %font-prim;
   @include font($size: 3.2rem, $height: 3.7rem, $weight: 500);
   color: #272727;
