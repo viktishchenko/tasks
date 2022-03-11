@@ -25,7 +25,7 @@
   position: relative;
   width: 970px;
   padding-bottom: 7px;
-  background: #fff;
+  background: $text-white;
   cursor: default;
 }
 
@@ -37,7 +37,7 @@
   transform: translate(198%, -84%);
   border: none;
   font-size: 36px;
-  color: #030303;
+  color: $bg-dark;
   background: transparent;
   @extend %transition;
   &:hover {
@@ -94,7 +94,7 @@
   height: 665px;
   margin-left: 40px;
   padding: 25px 30px;
-  border: 1px solid black;
+  border: 1px solid $text-black;
 }
 
 .booking__overview-size {
@@ -105,7 +105,7 @@
   margin-bottom: 2px;
   @extend %font-prim;
   @include font($size: 3.2rem, $height: 3.7rem, $weight: 500);
-  color: #272727;
+  color: $booking-title;
 }
 
 .booking form {
@@ -135,14 +135,14 @@
   @extend %font-prim;
   @include font($size: 1.8rem, $height: 2.1rem, $weight: 400);
   background-color: white;
-  color: #030303;
+  color: $bg-dark;
 }
 
 .form__input {
   width: 100%;
   padding: 14px 0;
   padding-right: 3px;
-  border: 1px solid black;
+  border: 1px solid $text-black;
   text-align: center;
   &:focus-visible {
     border: 1px solid $font-gold;
@@ -169,6 +169,10 @@
   &::-webkit-datetime-edit {
     margin-left: 30px;
   }
+}
+
+.form__date input[type="date"]::-webkit-inner-spin-button {
+  z-index: 1;
 }
 
 .form__time {
@@ -213,6 +217,25 @@
   &::-webkit-datetime-edit {
     margin-left: 30px;
   }
+}
+
+.form__select {
+  width: 100%;
+  padding: 14px 0;
+  padding-right: 3px;
+  border: 1px solid $text-black;
+}
+
+.form__select,
+.form__option {
+  @extend %font-prim;
+  @include font($size: 1.8rem, $height: 2.1rem, $weight: 400);
+  background-color: $text-white;
+  color: $bg-dark;
+}
+
+.form__select::-webkit-details-marker {
+  display: none;
 }
 
 // Animation

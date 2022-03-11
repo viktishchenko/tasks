@@ -6,7 +6,8 @@
     transition: all 0.3s ease-out;
 }
 
-.contacts__address-item, .contacts__address, .form__label, .booking__overview-title, .booking__text, .tickets__amount-btn, .tickets-text, .tickets-subtitle, .card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .section__text, .navigation__item, body {
+.contacts__address-item, .contacts__address, .form__select,
+.form__option, .form__label, .booking__overview-title, .booking__text, .tickets__amount-btn, .tickets-text, .tickets-subtitle, .card__text, .card__desc, .slider__value, .welcome__button, .welcome__text, .section__text, .navigation__item, body {
     font-family: "Roboto", sans-serif;
 }
 
@@ -793,7 +794,7 @@ body {
     position: relative;
     width: 970px;
     padding-bottom: 7px;
-    background: #fff;
+    background: #ffffff;
     cursor: default;
 }
 
@@ -873,7 +874,7 @@ body {
     height: 665px;
     margin-left: 40px;
     padding: 25px 30px;
-    border: 1px solid black;
+    border: 1px solid #000000;
 }
 
 .booking__overview-size {
@@ -934,7 +935,7 @@ body {
     width: 100%;
     padding: 14px 0;
     padding-right: 3px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     text-align: center;
 }
 
@@ -965,6 +966,10 @@ body {
 
 .form__date::-webkit-datetime-edit {
     margin-left: 30px;
+}
+
+.form__date input[type=date]::-webkit-inner-spin-button {
+    z-index: 1;
 }
 
 .form__time {
@@ -1013,6 +1018,27 @@ body {
 
 .form__number::-webkit-datetime-edit {
     margin-left: 30px;
+}
+
+.form__select {
+    width: 100%;
+    padding: 14px 0;
+    padding-right: 3px;
+    border: 1px solid #000000;
+}
+
+.form__select,
+.form__option {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1rem;
+    background-color: #ffffff;
+    color: #030303;
+}
+
+.form__select::-webkit-details-marker {
+    display: none;
 }
 
 [data-animation] .modal-dialog {
