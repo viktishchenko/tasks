@@ -34,7 +34,7 @@ const nextPic = document.querySelector(".btn-next");
 const nextImg = document.querySelector("img");
 const editor = document.querySelector(".editor");
 const baseUrl =
-  "https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/";
+  "https://raw.githubusercontent.com/viktishchenko/tasks/momentum/momentum/assets/images/";
 
 const imgSet = [
   "01.jpg",
