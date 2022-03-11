@@ -7,48 +7,73 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,200&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="./assets/fonts/awesome/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/fonts/owfont/css/owfont-regular.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>MomentuM</title>
+    <link href="assets/favicon.png" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
   </head>
   <body>
-    <div class="overlay">
+    <header class="header">
+      <div class="player">
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <div class="volume-controls">
+          <div class="volume-controls__slider"></div>
+        </div>
+        <ul class="play-list"></ul>
+      </div>
       <div class="weather">
         <i class="weather-icon owf owf-803"></i>
-        <div class="city" spellcheck="false" contenteditable="true"></div>
+        <div
+          class="city enter-point"
+          spellcheck="false"
+          onkeypress="return (this.innerText.length <= 12)"
+          contenteditable="true"
+        ></div>
         <div class="temperature"></div>
         <div class="windSpeed"></div>
         <div class="humidity"></div>
         <div class="weather-discription"></div>
       </div>
-      <time class="time"></time>
-      <time class="date"></time>
-      <h1>
-        <span class="greeting"></span>
-        <span class="name" spellcheck="false" contenteditable="true"></span>
-      </h1>
-      <h2 class="m-heading">What Is Your Focus Today?</h2>
-      <h2 class="focus" spellcheck="false" contenteditable="true"></h2>
-      <div class="control left">
-        <span class="btn"
-          ><i class="fa fa-refresh fabtn" aria-hidden="true"></i>
-        </span>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
       </div>
-      <span class="btn-qu"
-        ><i class="fa fa-refresh faqus" aria-hidden="true"></i>
-      </span>
+      <time class="time"></time>
+      <date class="date"></date>
+      <h1 class="greeting-container">
+        <span class="greeting">Good Morning, </span>
+        <span
+          class="name enter-point"
+          spellcheck="false"
+          onkeypress="return (this.innerText.length <= 12)"
+          contenteditable="true"
+          >[Enter Name]</span
+        >
+      </h1>
+      <div class="todo-task">
+        <h2 class="m-heading">What Is Your Focus Today?</h2>
+        <h2
+          class="focus"
+          spellcheck="false"
+          onkeypress="return (this.innerText.length <= 30)"
+          contenteditable="true"
+        ></h2>
+      </div>
+    </main>
+    <footer class="footer">
       <blockquote class="quote-card">
-        <p class="quotes"></p>
+        <button class="change-quote"></button>
+        <p class="quote"></p>
         <cite class="author"></cite>
       </blockquote>
-    </div>
-    <script src="script.js"></script>
+    </footer>
+    <!-- <script src="js/script.js"></script> -->
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
