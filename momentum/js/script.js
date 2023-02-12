@@ -258,7 +258,8 @@ changeQuote.onclick = function () {
 };
 
 async function getQuote() {
-  const url = `https://quote-garden.herokuapp.com/api/v3/quotes/random`;
+  // const url = `https://quote-garden.herokuapp.com/api/v3/quotes/random`;
+  const url = `https://quote-garden.onrender.com/api/v3/quotes/random`;
 
   const res = await fetch(url);
   const datas = await res.json();
@@ -274,9 +275,9 @@ async function getQuote() {
 function getCity() {
   if (
     localStorage.getItem(".city") === null ||
-    localStorage.getItem(".city") == "Minsk"
+    localStorage.getItem(".city") == "Omsk"
   ) {
-    city.textContent = "Minsk";
+    city.textContent = "Omsk";
   } else {
     city.textContent = localStorage.getItem(".city");
     getWeather();

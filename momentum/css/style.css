@@ -11,7 +11,8 @@
 }
 
 body {
-  min-width: 480px;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
@@ -169,6 +170,7 @@ body {
 .main {
   position: relative;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -183,6 +185,7 @@ body {
   top: 50%;
   margin-top: -16px;
   cursor: pointer;
+  opacity: 0.3;
 }
 
 .slide-prev {
@@ -226,7 +229,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 30vh;
+  height: auto;
   min-height: 160px;
   padding: 20px;
 }
@@ -312,19 +315,37 @@ body {
   opacity: 0.8;
 }
 
+@media (max-width: 1024px) {
+  .volume-controls {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
     font-size: 72px;
   }
 
+  .slider-icon {
+    top: 45%;
+  }
+
   .greeting-container {
     min-height: 40px;
     font-size: 32px;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .greeting {
     padding: 5px;
+  }
+
+  .todo-task h2 {
+    margin-bottom: 0;
   }
 
   .name {
@@ -333,5 +354,52 @@ body {
   }
   .quote-card {
     width: 100%;
+  }
+}
+
+@media (max-width: 472px) {
+  .player-controls {
+    margin-bottom: 25px;
+  }
+
+  .volume-controls {
+    height: 10px;
+    top: 50px;
+  }
+
+  .play-item {
+    padding: 2px;
+    padding-left: 17px;
+  }
+
+  .weather {
+    font-size: 1rem;
+  }
+
+  .time {
+    font-size: 60px;
+  }
+
+  .date {
+    font-size: 1.2rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .greeting-container {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .greeting-container span {
+    padding: 0;
+    font-size: inherit;
+  }
+
+  .todo-task h2 {
+    font-size: 1.3rem;
+  }
+
+  .quote {
+    font-size: 1.1rem;
   }
 }
