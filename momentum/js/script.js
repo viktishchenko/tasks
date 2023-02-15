@@ -17,6 +17,8 @@ const humidity = document.querySelector(".humidity");
 const author = document.querySelector(".author");
 const quotes = document.querySelector(".quote");
 const playBtn = document.querySelector(".play");
+const nextBtn = document.querySelector(".play-next");
+const prevBtn = document.querySelector(".play-prev");
 const playListUl = document.querySelector(".play-list");
 const volumeControls = document.querySelector(".volume-controls");
 const volumeControlsSlider = document.querySelector(".volume-controls__slider");
@@ -175,7 +177,7 @@ function Greet() {
   }
 }
 
-// Get Name
+// Get User Name
 function getName() {
   if (localStorage.getItem(".name") === null) {
     names.textContent = "[Enter Name]";
@@ -194,7 +196,7 @@ function hiddenName(e) {
   }
 }
 
-// Set Name
+// Set User Name
 function setName(e) {
   if (e.type === "keypress") {
     if (e.which == 13 || e.keyCode == 13) {
@@ -343,18 +345,22 @@ async function getWeather() {
 function getPlayList() {
   playList.forEach((el, i) => {
     let li = document.createElement("li");
-    li.classList.add("play-item");
+    li.setAttribute("class", "play-item");
+    //li.classList.add("play-item");
     li.textContent = playList[i].title;
     playListUl.appendChild(li);
   });
 }
 
+getPlayList();
+
 //get Audio
 let isPlay = false;
+let idx = 0;
 const audio = new Audio();
 
 function playAudio() {
-  audio.src = playList[0].src;
+  audio.src = playList[idx].src;
   audio.currentTime = 0;
   audio.volume = 0.25;
   if (!isPlay) {
@@ -372,6 +378,62 @@ function playAudio() {
   }
 }
 
+// -------------------- start ----------------
+
+let trecks = document.querySelectorAll(".play-item");
+
+trecks.forEach((treck, index) => {
+  if (idx === 0) {
+    trecks[0].classList.add("active");
+  }
+  treck.addEventListener("click", function () {
+    if (index === idx) {
+      removeActive();
+      treck.classList.add("active");
+      playAudio();
+    } else {
+      if (isPlay) {
+        removeActive();
+        isPlay = false;
+        playBtn.classList.toggle("pause");
+        audio.pause;
+        idx = index;
+        treck.classList.add("active");
+        playAudio();
+      } else {
+        removeActive();
+        idx = index;
+        treck.classList.add("active");
+        playAudio();
+      }
+    }
+  });
+});
+
+function removeActive() {
+  trecks.forEach((treck, idx) => {
+    treck.classList.remove("active");
+  });
+}
+
+function nextTreck() {
+  idx += 1;
+  if (idx > trecks.length - 1) {
+    idx = 0;
+  }
+  console.log("idx>>", idx);
+}
+
+function prevTreck() {
+  idx -= 1;
+  if (idx < 0) {
+    idx = trecks.length - 1;
+  }
+  console.log("idx>>", idx);
+}
+
+// -------------------- end ----------------
+
 //get Sound value
 volumeControls.addEventListener(
   "click",
@@ -386,9 +448,11 @@ volumeControls.addEventListener(
   false
 );
 
+nextBtn.addEventListener("click", nextTreck);
+prevBtn.addEventListener("click", prevTreck);
+
 playBtn.addEventListener("click", playAudio);
 document.addEventListener("DOMContentLoaded", getQuote);
-document.addEventListener("DOMContentLoaded", getPlayList);
 document.addEventListener("DOMContentLoaded", getWeather);
 changeQuote.addEventListener("click", getQuote);
 city.addEventListener("click", hiddenCity);
@@ -408,54 +472,3 @@ Greet();
 getName();
 getFocus();
 getCity();
-
-console.log("Самооценка:");
-console.log("время выводится в 24-часовом формате, например: 21:01:00: +5");
-console.log(
-  "время обновляется каждую секунду - часы идут. Когда меняется одна из цифр, остальные при этом не меняют своё положение на странице (время не дёргается): +5"
-);
-console.log(
-  `выводится день недели, число, месяц, например: "Воскресенье, 16 мая" / "Sunday, May 16" / "Нядзеля, 16 траўня": +5`
-);
-console.log(
-  "текст приветствия меняется в зависимости от времени суток (утро, день, вечер, ночь). Проверяется соответствие приветствия текущему времени суток: +5"
-);
-console.log(
-  "пользователь может ввести своё имя. При перезагрузке страницы приложения имя пользователя сохраняется: +5"
-);
-console.log(
-  "ссылка на фоновое изображение формируется с учётом времени суток и случайного номера изображения (от 01 до 20). Проверяем, что при перезагрузке страницы фоновое изображение изменилось. Если не изменилось, перезагружаем страницу ещё раз: +5"
-);
-console.log(
-  "при смене слайдов важно обеспечить плавную смену фоновых изображений. Не должно быть состояний, когда пользователь видит частично загрузившееся изображение или страницу без фонового изображения. Плавную смену фоновых изображений не проверяем: 1) при загрузке и перезагрузке страницы 2) при открытой консоли браузера 3) при слишком частых кликах по стрелкам для смены изображения: +5"
-);
-console.log(
-  "при перезагрузке страницы приложения указанный пользователем город сохраняется, данные о нём хранятся в local storage: +5"
-);
-console.log(
-  "для указанного пользователем населённого пункта выводятся данные о погоде, если их возвращает API. Данные о погоде включают в себя: иконку погоды, описание погоды, температуру в °C, скорость ветра в м/с, относительную влажность воздуха в %. Числовые параметры погоды округляются до целых чисел: +5"
-);
-console.log(
-  "выводится уведомление об ошибке при вводе некорректных значений, для которых API не возвращает погоду (пустая строка или бессмысленный набор символов): +5"
-);
-console.log(
-  "при загрузке страницы приложения отображается рандомная цитата и её автор: +5"
-);
-console.log(
-  "при перезагрузке страницы цитата обновляется (заменяется на другую). Есть кнопка, при клике по которой цитата обновляется (заменяется на другую): +5 "
-);
-console.log(
-  "при клике по кнопке Play/Pause проигрывается первый трек из блока play-list, иконка кнопки меняется на Pause: +3"
-);
-console.log(
-  "при клике по кнопке Play/Pause во время проигрывания трека, останавливается проигрывание трека, иконка кнопки меняется на Play: +3"
-);
-console.log(
-  "добавлен регулятор громкости, при перемещении ползунка регулятора громкости меняется громкость проигрывания звука: +3"
-);
-console.log(
-  "ToDo List - список дел (как в оригинальном приложении) или Список ссылок (как в оригинальном приложении) или Свой собственный дополнительный функционал, по сложности аналогичный предложенным: +10(не знаю как выглядит оригинальный туду, поэтому оценку можно не брать в расчет)"
-);
-console.log(`----------------------`);
-console.log(`79 баллов`);
-console.log(`----------------------`);
