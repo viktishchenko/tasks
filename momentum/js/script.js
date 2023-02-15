@@ -378,8 +378,6 @@ function playAudio() {
   }
 }
 
-// -------------------- start ----------------
-
 let trecks = document.querySelectorAll(".play-item");
 
 trecks.forEach((treck, index) => {
@@ -411,9 +409,38 @@ trecks.forEach((treck, index) => {
 });
 
 function removeActive() {
-  trecks.forEach((treck, idx) => {
+  trecks.forEach((treck) => {
     treck.classList.remove("active");
   });
+}
+
+function getActive(idx) {
+  trecks.forEach((treck, index) => {
+    if (idx === index) {
+      treck.classList.add("active");
+    }
+  });
+}
+
+function loadTreck(idx) {
+  if (!isPlay) {
+    removeActive();
+    getActive(idx);
+    playAudio();
+  } else {
+    if (isPlay) {
+      removeActive();
+      isPlay = false;
+      playBtn.classList.toggle("pause");
+      audio.pause;
+      getActive(idx);
+      playAudio();
+    } else {
+      removeActive();
+      getActive(idx);
+      playAudio();
+    }
+  }
 }
 
 function nextTreck() {
@@ -421,7 +448,7 @@ function nextTreck() {
   if (idx > trecks.length - 1) {
     idx = 0;
   }
-  console.log("idx>>", idx);
+  loadTreck(idx);
 }
 
 function prevTreck() {
@@ -429,10 +456,8 @@ function prevTreck() {
   if (idx < 0) {
     idx = trecks.length - 1;
   }
-  console.log("idx>>", idx);
+  loadTreck(idx);
 }
-
-// -------------------- end ----------------
 
 //get Sound value
 volumeControls.addEventListener(
