@@ -47,10 +47,10 @@ label:not(.btn) {
 label:hover {
   color: #cbd5de;
 }
-label:hover output {
+label:hover result {
   color: #a2abb3;
 }
-label:active output {
+label:active result {
   color: #cbd5de;
 }
 input[type="range"] {
@@ -78,7 +78,7 @@ input[type="range"]::-webkit-slider-thumb {
 label:hover input[type="range"]::-webkit-slider-thumb {
   background-color: #00c9b7;
 }
-output {
+.result {
   position: absolute;
   width: 60px;
   height: 40px;
