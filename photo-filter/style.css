@@ -234,32 +234,8 @@ img {
 .github:hover {
   color: #fff;
 }
-.rss {
-  display: block;
-  position: relative;
-  font-family: "Open Sans", sans-serif;
-  width: 86px;
-  height: 32px;
-  background-image: url("assets/svg/rss.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-  padding-right: 111px;
-}
-.rss-year {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 21px;
-  letter-spacing: -2px;
+.year {
   color: #cbd5de;
-  line-height: 0.9;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.rss:hover .rss-year {
-  right: -5px;
-  letter-spacing: 0;
 }
 @media (max-width: 1024px) {
   .main {
