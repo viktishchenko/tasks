@@ -1,0 +1,83 @@
+$image-gap: 32px;
+
+.about-us {
+    padding: 30px 0 100px 0;
+}
+
+.about-us__title {
+    margin: 0 0 14px;
+}
+
+.about-us__description {
+    margin: 0 0 45px;
+}
+
+.employee-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    @include media-tablet {
+        flex-direction: column;
+    }
+    @include media-mobile-small{
+        gap: 10px 0
+    }
+}
+
+.employee__content {
+@include media-mobile-small {
+   >* {
+    font-size: 1.4rem !important;
+   }
+}
+}
+
+.employee {
+    padding: 35px 0;
+    margin-right: 64px;
+    position: relative;
+    width: calc(30% - 32px);
+    @include media-tablet {
+        width: calc(60% - 32px);
+    }
+    @include media-mobile {
+        margin-right: 32px;
+        width: 90%;
+    }
+    @include media-mobile-small{
+        padding: 20px 0;
+    }
+}
+
+.employee__name {
+    margin: 0;
+}
+
+.employee__title {
+    margin: 0;
+    @include font ($size: 1.6rem, $weight: normal);
+}
+
+.employee__contact {
+    @include font ($size: 1.6rem, $weight: normal);
+    color: $color-link;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.employee__photo {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    position: absolute;
+    right: -$image-gap;
+    top: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+    @include media-mobile-small {
+        width: 65px;
+        height: 65px;
+        top: 25px
+    }
+}

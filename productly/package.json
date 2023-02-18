@@ -1,0 +1,19 @@
+{
+  "name": "flc",
+  "version": "1.0.0",
+  "description": "Friday Live Coding",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch src/sass/style.scss src/sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "sass": "^1.58.3",
+    "webpack-cli": "^3.3.11"
+  }
+}
