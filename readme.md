@@ -26,6 +26,10 @@
 
   - modal generator w modules
 
+  ```js
+  npx webpack --watch
+  ```
+
 - temp-source(D:\learn\temp\productly)
 
 ### install
