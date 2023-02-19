@@ -679,6 +679,7 @@ h5 {
 }
 .tag_selected {
   background-color: #FF9900;
+  border: 1px solid #FF9900;
   color: #ffffff;
 }
 .tag_bordered {

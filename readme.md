@@ -11,12 +11,20 @@
   - normalize/reset
   - variable/local variable (/about-us.scss)
 
-- adaptive ([wha](https://www.google.com/search?q=adaptive+vs+responsive)) layout resolutions
+- adaptive ([wha?](https://www.google.com/search?q=adaptive+vs+responsive)) layout resolutions
 
   - 1440px
   - 768px
   - 414px
   - 320px
+
+- js pure
+
+  - OOP & functional style
+
+    ![functional style](productly/readmeAssets/functional-prog.png)
+
+  - modal generator
 
 - temp-source(D:\learn\temp\productly)
 
@@ -36,3 +44,4 @@ npm i sass
 - part2 (https://www.youtube.com/watch?v=BJENQIX2e2o)
 - part3 (https://www.youtube.com/live/fooyYgIuZe8)
 - part4 (https://www.youtube.com/live/Qk2UGlFNKPE)
+- part5 (https://www.youtube.com/live/ouZnGUefneQ)
