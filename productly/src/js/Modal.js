@@ -38,6 +38,12 @@ export class Modal {
     this.setContent(content);
 
     this.appendModalElements();
+
+    //Bind events
+    this.bindEvents();
+
+    //Open modal
+    this.openModal();
   }
 
   createDomNode(node, element, ...classes) {
@@ -59,5 +65,24 @@ export class Modal {
     this.modal.append(this.modalCloseBtn);
     this.modal.append(this.modalContent);
     this.overlay.append(this.modal);
+  }
+
+  bindEvents() {
+    this.modalCloseBtn.addEventListener("click", this.closeModal);
+    this.overlay.addEventListener("click", this.closeModal);
+  }
+
+  openModal() {
+    document.body.append(this.overlay);
+  }
+
+  closeModal(e) {
+    let classes = e.target.classList;
+    if (
+      classes.contains("overlay") ||
+      classes.contains("modal__close-button")
+    ) {
+      document.querySelector(".overlay").remove();
+    }
   }
 }
