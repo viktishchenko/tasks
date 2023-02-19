@@ -1,5 +1,6 @@
 // imd, (Article)
 import { Article } from "./js/Article.js";
+import { Modal } from "./js/Modal.js";
 
 const data = [
   {
@@ -43,6 +44,9 @@ window.onload = function () {
 
   // Tags
   addTagsClickHandler();
+
+  //Generate Base Modal from Modal Class
+  addToolsClickHandler();
 };
 
 // nfn, anfn
@@ -119,4 +123,21 @@ const generateArticles = (data) => {
     articles.push(new Article(article));
   });
   return articles;
+};
+
+const addToolsClickHandler = () => {
+  document
+    .querySelector(".tools__button .button")
+    .addEventListener("click", () => {
+      generateToolsModal();
+    });
+};
+
+const generateToolsModal = () => {
+  renderModalWindow("test content for tools modal");
+};
+
+const renderModalWindow = (content) => {
+  let modal = new Modal("tools-modal");
+  modal.buildModal(content);
 };
