@@ -14,16 +14,17 @@ export class Article {
     article.setAttribute("data-id", this.id);
 
     this.urlToImage &&
-      (template += `
-    <img class="strategy__image" src=${this.urlToImage} alt=${this.title}
-    `);
+      (template += `<img class="strategy__image" src=${this.urlToImage} alt="strategy">`);
 
     if (this.title || this.tags) {
       template += `<div class="strategy__content">`;
-      template += `<h3 class="strategy__name">${this.title}</h3>`;
+
+      this.title &&
+        (template += `<h3 class="strategy__name">${this.title}</h3>`);
 
       if (this.tags) {
         template += `<div class="strategy__tags tags">`;
+
         this.tags.map((tag) => {
           template += `<span class="tag tag_colored">${tag}</span>`;
         });

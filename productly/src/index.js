@@ -42,11 +42,11 @@ window.onload = function () {
   }
 
   // Tags
-  addTagClickHandler();
+  addTagsClickHandler();
 };
 
 // nfn, anfn
-const addTagClickHandler = () => {
+const addTagsClickHandler = () => {
   document.querySelector(".strategies__tags").addEventListener("click", (e) => {
     if (e.target.classList.contains("tag")) {
       let clickedTag = e.target;
@@ -99,12 +99,24 @@ const filterStrategyBySelectedTag = (selectedTag) => {
 
 // nfn, solid(single-resp)
 const renderArticlesToDom = () => {
-  let strategiesWrapper = getStrategiesWrapper();
+  let strategiesWrapper = getStrategiesContainer();
+  generateArticles(data).forEach((article) => {
+    strategiesWrapper.append(article.generateArticle());
+  });
 };
 
 // nfn
-const getStrategiesWrapper = () => {
+const getStrategiesContainer = () => {
   const starategiesContainer = document.querySelector(".strategy-wrapper");
   starategiesContainer.innerHTML = "";
   return starategiesContainer;
+};
+
+// nfn, fre
+const generateArticles = (data) => {
+  let articles = [];
+  data.forEach((article) => {
+    articles.push(new Article(article));
+  });
+  return articles;
 };

@@ -11,7 +11,7 @@
   - normalize/reset
   - variable/local variable (/about-us.scss)
 
-- adaptive ([wha?](https://www.google.com/search?q=adaptive+vs+responsive)) layout resolutions
+- <ins>adaptive</ins> ([wha?](https://www.google.com/search?q=adaptive+vs+responsive)) layout resolutions
 
   - 1440px
   - 768px
@@ -27,6 +27,8 @@
   - modal generator w modules
 
   ```js
+  // watchers
+  npm run style
   npx webpack --watch
   ```
 
