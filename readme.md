@@ -24,7 +24,7 @@
 
     ![functional style](productly/readmeAssets/functional-prog.png)
 
-  - modal generator
+  - modal generator w modules
 
 - temp-source(D:\learn\temp\productly)
 
