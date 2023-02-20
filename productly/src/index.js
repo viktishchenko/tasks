@@ -1,5 +1,6 @@
 // imd, (Article)
 import { Article } from "./js/Article.js";
+import { ArticleModal } from "./js/ArticleModal.js";
 import { Modal } from "./js/Modal.js";
 
 const data = [
@@ -107,6 +108,8 @@ const renderArticlesToDom = () => {
   generateArticles(data).forEach((article) => {
     strategiesWrapper.append(article.generateArticle());
   });
+
+  addStrategyClickHandler();
 };
 
 // nfn
@@ -140,4 +143,26 @@ const generateToolsModal = () => {
 const renderModalWindow = (content) => {
   let modal = new Modal("tools-modal");
   modal.buildModal(content);
+};
+
+const addStrategyClickHandler = () => {
+  document.querySelector(".strategy-wrapper").addEventListener("click", (e) => {
+    if (e.target.closest(".strategy")) {
+      let clickedStrategyId = e.target
+        .closest(".strategy")
+        .getAttribute("data-id");
+      let clickedStrategyData = getClickedStrategyData(clickedStrategyId);
+
+      renderArticleModalWindow(clickedStrategyData);
+    }
+  });
+};
+
+const getClickedStrategyData = (id) => {
+  return data.find((article) => article.id == id);
+};
+
+const renderArticleModalWindow = (article) => {
+  let modal = new ArticleModal("article-modal", article);
+  modal.renderModal();
 };
