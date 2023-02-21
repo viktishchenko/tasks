@@ -55,18 +55,26 @@ npm i sass
 
 ```js
   npm init -y
-  npm install webpack webpack-cli --save-dev
-  npm install --save-dev html-webpack-plugin
-  npm i -D clean-webpack-plugin
-  npm i babel-loader
-  npm install --save-dev mini-css-extract-plugin
-  npm install --save-dev style-loader
-  npm install --save-dev css-loader
-  npm install sass-loader sass webpack --save-dev
-  npm i node-sass
-  npm install file-loader --save-dev
-  npm install --save-dev html-loader
-  npm install copy-webpack-plugin --save-dev
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.4.0",
+    "html-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.4.0",
+    "mini-css-extract-plugin": "^2.4.3",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.2.0",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 
 // add scripts
   "dev": "webpack --mode development"
