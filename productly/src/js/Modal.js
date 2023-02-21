@@ -77,6 +77,7 @@ export class Modal {
   }
 
   closeModal(e) {
+    e.stopPropagation();
     let classes = e.target.classList;
     if (
       classes.contains("overlay") ||
