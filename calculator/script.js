@@ -29,8 +29,8 @@ for (var i = 0; i < operations.length; i++) {
 for (var i = 0; i < clearBtns.length; i++) {
   var clearBtn = clearBtns[i];
   clearBtn.addEventListener("click", function (e) {
-    clearPress(e.target.textContent);
-    console.log(e.target.textContent);
+    clearPress(e.target.textContent.trim());
+    console.log(e.target.textContent.trim());
   });
 }
 
@@ -63,6 +63,7 @@ function numberPress(number) {
 }
 
 function operationPress(op) {
+  op = op.trim();
   let localOperationMemory = display.value;
 
   if (MemoryNewNumber && MemoryPendingOperation !== "=") {
@@ -77,7 +78,10 @@ function operationPress(op) {
       MemoryCurrentNumber *= +localOperationMemory;
     } else if (MemoryPendingOperation === "÷") {
       MemoryCurrentNumber /= +localOperationMemory;
-    } else if (MemoryPendingOperation === "xn") {
+    } else if (
+      MemoryPendingOperation === "xn".trim() ||
+      MemoryPendingOperation === "n".trim()
+    ) {
       MemoryCurrentNumber = Math.pow(MemoryCurrentNumber, localOperationMemory);
     } else {
       MemoryCurrentNumber = +localOperationMemory;
