@@ -261,16 +261,25 @@ changeQuote.onclick = function () {
 
 async function getQuote() {
   // const url = `https://quote-garden.herokuapp.com/api/v3/quotes/random`;
-  const url = `https://quote-garden.onrender.com/api/v3/quotes/random`;
+  // const url = `https://quote-garden.onrender.com/api/v3/quotes/random`;
+  const url = `https://dummyjson.com/quotes/random`;
 
   const res = await fetch(url);
   const datas = await res.json();
+  if (datas.quote.length > 165) {
+    getQuote();
+  } else {
+    quotes.textContent = datas.quote;
+    author.textContent = datas.author;
+  }
+  /*
+  // quote-gqrden
   if (datas.data[0].quoteText.length > 165) {
     getQuote();
   } else {
     quotes.textContent = datas.data[0].quoteText;
     author.textContent = datas.data[0].quoteAuthor;
-  }
+  } */
 }
 
 //Get Weather
